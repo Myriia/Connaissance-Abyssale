@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #F9F9F9;
+}
+article{
+  width: 80%;
+  margin: 0 10%;
+}
+section{
+  margin: 10px 0;
+  padding: 20px;
+}
+.section-background{
+  background-color: white;
+}
+h1 {
+  font-size: 4em;
+  color: #a5c3e9;
+}
