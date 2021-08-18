@@ -16,11 +16,12 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label: 'Home', icon: 'pi pi-fw pi-home'},
-      {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
-      {label: 'Edit', icon: 'pi pi-fw pi-pencil'},
-      {label: 'Documentation', icon: 'pi pi-fw pi-file'},
-      {label: 'Settings', icon: 'pi pi-fw pi-cog'}
+      {label: 'Accueil', routerLink: 'home'},
+      {label: 'Côté Réserve', routerLink: 'reserveSide'},
+      {label: 'Les Curiosités', routerLink: 'curiosities'},
+      {label: 'Si j\'étais', routerLink: 'whatIf'},
+      {label: 'Arbre Phylogénétique', routerLink: 'phylogeneticTree'},
+      {label: 'A Propos', routerLink: 'about'}
   ];
 
   this.activeItem = this.items[0];
