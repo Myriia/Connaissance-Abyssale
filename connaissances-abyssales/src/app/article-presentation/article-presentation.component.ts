@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ca-article-presentation',
@@ -9,7 +9,7 @@ export class ArticlePresentationComponent implements OnInit {
 
   @Input()
   article: any;
-
+  
   constructor() { }
 
   ngOnInit(): void {
