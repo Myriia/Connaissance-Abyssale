@@ -1,0 +1,21 @@
+:host>>>.p-tabmenu-nav {
+    place-content: center;
+    margin-bottom: 30px;
+    border-width: 0 0 0 0;
+}
+
+:host>>>.p-menuitem-text {
+    color: lightseagreen;
+}
+
+:host>>>.p-menuitem-link {
+    border-color: transparent transparent transparent transparent !important;
+}
+
+:host>>>.p-menuitem-link-active {
+    border-color: transparent transparent lightseagreen transparent !important;
+}
+
+:host>>>.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+    box-shadow: unset!important;
+}
