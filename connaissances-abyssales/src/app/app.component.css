@@ -1,14 +1,15 @@
 .image-home {
-  height: 300px;
-  object-fit: cover;
-  width: 70%;
+    height: 300px;
+    object-fit: cover;
+    width: 70%;
 }
 
-.text-welcome{
-  position: absolute;
-  text-align: right;
-  width: 75%;
+.text-welcome {
+    position: absolute;
+    text-align: right;
+    width: 75%;
 }
-.article-presentation{
-  width: 33%;
+
+.article-presentation {
+    width: 33%;
 }
