@@ -4,6 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import {CardModule} from "primeng/card";
+import {DividerModule} from "primeng/divider";
+import {ChipModule} from "primeng/chip";
+import { TabMenuModule } from 'primeng/tabmenu';
+
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CuriositiesComponent } from './pages/curiosities/curiosities.component';
@@ -11,7 +16,6 @@ import { PhylogeneticTreeComponent } from './pages/phylogenetic-tree/phylogeneti
 import { WhatIfComponent } from './pages/what-if/what-if.component';
 import { ReserveSideComponent } from './pages/reserve-side/reserve-side.component';
 import { MenuComponent } from './menu/menu.component';
-import { TabMenuModule } from 'primeng/tabmenu';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -32,11 +36,14 @@ const routes: Routes = [
     WhatIfComponent,
     ReserveSideComponent,
     MenuComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     TabMenuModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    CardModule,
+    DividerModule,
+    ChipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

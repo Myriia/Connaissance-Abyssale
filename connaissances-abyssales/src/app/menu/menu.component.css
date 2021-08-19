@@ -12,10 +12,6 @@
     border-color: transparent transparent transparent transparent !important;
 }
 
-:host>>>.p-menuitem-link {
-    border-color: transparent transparent transparent transparent !important;
-}
-
 :host>>>.p-menuitem-link-active {
     border-color: transparent transparent lightseagreen transparent !important;
 }
