@@ -1,2 +1,17 @@
 <ca-menu></ca-menu>
 <router-outlet></router-outlet>
+
+<article>
+  <div class="text-welcome">
+    <h1>Texte</h1>
+    <h1>de bienvenue</h1>
+  </div>
+  <section class="section-background">
+    <img class="image-home" [src]="'../assets/' + imageHome"/>
+  </section>
+  <section class="flex">
+    <div class="article-presentation" *ngFor="let index of articlesHomePage">
+      <ca-article-presentation [article]="getArticleById(index)"></ca-article-presentation>
+    </div>
+  </section>
+</article>

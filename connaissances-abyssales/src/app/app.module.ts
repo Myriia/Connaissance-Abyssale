@@ -17,6 +17,12 @@ import { WhatIfComponent } from './pages/what-if/what-if.component';
 import { ReserveSideComponent } from './pages/reserve-side/reserve-side.component';
 import { MenuComponent } from './menu/menu.component';
 
+import {TabMenuModule} from 'primeng/tabmenu';
+import { ArticlePresentationComponent } from './article-presentation/article-presentation.component';
+import {CardModule} from "primeng/card";
+import {DividerModule} from "primeng/divider";
+import {ChipModule} from "primeng/chip";
+
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'curiosities', component: CuriositiesComponent},
@@ -26,6 +32,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
+
 
 @NgModule({
   declarations: [
@@ -41,6 +48,7 @@ const routes: Routes = [
     BrowserModule,
     TabMenuModule,
     RouterModule.forRoot(routes),
+    ArticlePresentationComponent,
     CardModule,
     DividerModule,
     ChipModule
