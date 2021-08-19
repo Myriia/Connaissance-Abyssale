@@ -1,0 +1,37 @@
+:host >>> .p-card{
+  cursor: pointer;
+}
+
+:host >>> .p-card .p-card-content{
+  padding: 0;
+}
+
+:host >>> .p-card-title{
+  min-height: 2.5em;
+  max-height: 2.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resize_fit_center {
+  height: 12.5em;
+  object-fit: cover;
+  width: 100%;
+}
+
+:host >>> .p-card .p-card-footer {
+  padding: 0;
+}
+
+.read-more{
+  width: 100%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.content{
+  text-overflow: ellipsis;
+  display: inline-block;
+  height: 6.5em;
+  overflow: hidden;
+}
