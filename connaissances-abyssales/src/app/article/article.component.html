@@ -1,0 +1,40 @@
+<article class="">
+  <section class="grid section-background" *ngFor="let content of article.contents ; let i = index">
+
+    <!-- 1 IMAGE -->
+    <div class="col-6" *ngIf="content.img.length === 1">
+      <div *ngIf="content.img.length === 1" class="align-self-center">
+        <img class="resize_fit_center height-100" alt="Image de l'article" [src]="'../assets/' + content.img[0]">
+      </div>
+    </div>
+    <!-- 3 IMAGES -->
+    <div *ngIf="content.img.length === 3" class="col-6">
+      <div class="grid">
+        <div class="col-6">
+          <img class="resize_fit_center height-25em" alt="Image de l'article" [src]="'../assets/' + content.img[0]">
+        </div>
+        <div class="col-6">
+          <img class="resize_fit_center" alt="Image de l'article" [src]="'../assets/' + content.img[1]">
+          <img class="resize_fit_center" alt="Image de l'article" [src]="'../assets/' + content.img[2]">
+        </div>
+      </div>
+    </div>
+    <!-- TEXT -->
+    <div class="col-6">
+      <div *ngIf="i === 0">
+        <p-chip [label]="article.type"></p-chip>
+        <h2>{{article.title}}</h2>
+      </div>
+      <div>
+        {{content.text}}
+      </div>
+    </div>
+    <!-- 2 IMAGE -->
+    <div class="col-6" *ngIf="content.img.length === 2">
+      <div class="grid">
+        <img class="resize_fit_center" alt="Image de l'article" [src]="'../assets/' + content.img[0]">
+        <img class="resize_fit_center" alt="Image de l'article" [src]="'../assets/' + content.img[1]">
+      </div>
+    </div>
+  </section>
+</article>

@@ -17,6 +17,7 @@ import { WhatIfComponent } from './pages/what-if/what-if.component';
 import { ReserveSideComponent } from './pages/reserve-side/reserve-side.component';
 import { MenuComponent } from './menu/menu.component';
 import { ArticlePresentationComponent } from './article-presentation/article-presentation.component';
+import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'whatIf', component: WhatIfComponent},
   {path: 'reserveSide', component: ReserveSideComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'article/:id', component: ArticleComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 
@@ -38,7 +40,8 @@ const routes: Routes = [
     WhatIfComponent,
     ReserveSideComponent,
     MenuComponent,
-    ArticlePresentationComponent
+    ArticlePresentationComponent,
+    ArticleComponent
     ],
   imports: [
     BrowserModule,

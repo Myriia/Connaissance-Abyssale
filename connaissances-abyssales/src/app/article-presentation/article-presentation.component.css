@@ -13,12 +13,6 @@
     text-overflow: ellipsis;
 }
 
-.resize_fit_center {
-    height: 12.5em;
-    object-fit: cover;
-    width: 100%;
-}
-
  :host>>>.p-card .p-card-footer {
     padding: 0;
 }
@@ -34,4 +28,9 @@
     display: inline-block;
     height: 6.5em;
     overflow: hidden;
+}
+.resize_fit_center {
+  height: 12.5em;
+  object-fit: cover;
+  width: 100%;
 }
