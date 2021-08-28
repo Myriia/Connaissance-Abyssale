@@ -22,7 +22,7 @@ const articles = [
     content : [
       'Ceci est la première partie de l\'article. Un article est découpé en partie et seulement la première peut apparaitre ici.',
     ],
-    img_article_presentation : 'img1.png',
+    img_article_presentation : 'img5.png',
     type : TYPE_ARTICLE.TYPE_ARTICLE_1,
   },{
     id : 2,
@@ -30,12 +30,12 @@ const articles = [
     content : [
       'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
     ],
-    img_article_presentation : 'img2.png',
+    img_article_presentation : 'img6.jpg',
     type : TYPE_ARTICLE.TYPE_ARTICLE_2,
   },
 ];
 
 const title = 'Mamie Cameroun';
-const image_home_page = 'img3.png';
+const image_home_page = 'img8.jpg';
 
 export {title, NO_IMAGE, articles, articles_home_page, index_specified_item_no_found, image_home_page} ;
