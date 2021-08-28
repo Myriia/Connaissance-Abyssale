@@ -1,20 +1,11 @@
-:host>>>.p-tabmenu-nav {
-    place-content: center;
-    margin-bottom: 30px;
-    border-width: 0 0 0 0;
+:host>>>.p-menubar {
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
-:host>>>.p-menuitem-text {
-}
 
-:host>>>.p-menuitem-link {
-    border-color: transparent transparent transparent transparent !important;
-}
-
-:host>>>.p-menuitem-link-active {
-    border-color: transparent transparent lightseagreen transparent !important;
-}
-
-:host>>>.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+/*:host>>>.p-menubar:focus .p-menu-list:focus .p-tabmenuitem:focus .p-menuitem-text:not(.p-disabled):focus .p-menuitem-icon:not(.p-disabled):focus {
     box-shadow: unset!important;
-}
+}*/
