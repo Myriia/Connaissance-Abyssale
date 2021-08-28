@@ -18,16 +18,13 @@ jobs:
               node-version: 14.15
               
       - name: Install angular CLI 
-        working-directory: ./connaissances-abyssales
         run: npm install -g @angular/cli
           
       - name: npm dependencies
-        working-directory: ./connaissances-abyssales
         run: npm install 
          
       # Runs a set of commands using the runners shell
       - name: Build
-        working-directory: ./connaissances-abyssales
         run: ng build --output-path docs --base-href
  
       - name: Deploy 🚀
