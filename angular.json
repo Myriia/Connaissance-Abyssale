@@ -1,12 +1,12 @@
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "cli": {
-      "analytics": false
+        "analytics": false
     },
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "connaissances-abyssales": {
+        "connaissance-abyssale": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:application": {
@@ -20,7 +20,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/connaissances-abyssales",
+                        "outputPath": "dist/connaissance-abyssale",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "connaissances-abyssales:build:production"
+                            "browserTarget": "connaissance-abyssale:build:production"
                         },
                         "development": {
-                            "browserTarget": "connaissances-abyssales:build:development"
+                            "browserTarget": "connaissance-abyssale:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "connaissances-abyssales:build"
+                        "browserTarget": "connaissance-abyssale:build"
                     }
                 },
                 "test": {
@@ -106,5 +106,5 @@
             }
         }
     },
-    "defaultProject": "connaissances-abyssales"
+    "defaultProject": "connaissance-abyssale"
 }
