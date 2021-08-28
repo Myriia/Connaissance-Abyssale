@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@100;600&display=swap');
+
+h1, .p-card .p-card-title, .p-tabmenu-nav .p-menuitem-text {
+  font-family: 'IBM Plex Serif', serif;
+  color: #413C49;
+}
+h1 {
+  font-size: 4em;
+}
 body {
   background-color: #F9F9F9;
+}
+p {
+  font-family: 'IBM Plex Serif', serif;
 }
 article{
   width: 80%;
@@ -11,8 +23,4 @@ section{
 }
 .section-background{
   background-color: white;
-}
-h1 {
-  font-size: 4em;
-  color: #a5c3e9;
 }
