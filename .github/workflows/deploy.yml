@@ -28,7 +28,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build
         working-directory: ./connaissances-abyssales
-        run: ng build --output-path ../docs --base-href
+        run: ng build --output-path docs --base-href
  
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
