@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {articles, articles_home_page, image_home_page, index_specified_item_no_found} from "../../article";
 
 @Component({
-  selector: 'app-home',
+  selector: 'ca-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

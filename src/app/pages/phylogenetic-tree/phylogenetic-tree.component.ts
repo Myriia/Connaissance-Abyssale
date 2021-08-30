@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-phylogenetic-tree',
+  selector: 'ca-phylogenetic-tree',
   templateUrl: './phylogenetic-tree.component.html',
   styleUrls: ['./phylogenetic-tree.component.css']
 })

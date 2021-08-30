@@ -8,6 +8,7 @@ import { CardModule } from "primeng/card";
 import { DividerModule } from "primeng/divider";
 import { ChipModule } from "primeng/chip";
 import {MenubarModule} from 'primeng/menubar';
+import {PaginatorModule} from 'primeng/paginator';
 
 
 import { AboutComponent } from './pages/about/about.component';
@@ -59,6 +60,7 @@ const routes: Routes = [
     DividerModule,
     ChipModule,
     CardModule,
+    PaginatorModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
