@@ -1,0 +1,13 @@
+.resize_fit_center {
+  height: 12.5em;
+  object-fit: cover;
+  width: 100%;
+}
+.input{
+  width: 100%;
+}
+.close-button{
+  left: 90%;
+  color: red;
+  position: absolute;
+}
