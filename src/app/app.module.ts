@@ -22,8 +22,13 @@ import { ReserveDomTomComponent } from './pages/reserve-side/reserve-dom-tom/res
 import { ReserveAtlantiqueComponent } from './pages/reserve-side/reserve-atlantique/reserve-atlantique.component';
 import { ReservePacifiqueComponent } from './pages/reserve-side/reserve-pacifique/reserve-pacifique.component';
 import { ReserveMediterranneeComponent } from './pages/reserve-side/reserve-mediterrannee/reserve-mediterrannee.component';
+import {GlossaireComponent} from "./pages/glossaire/glossaire.component";
+import {ScrollPanelModule} from "primeng/scrollpanel";
+import {FormsModule} from "@angular/forms";
+import {InputTextModule} from 'primeng/inputtext';
 
 const routes: Routes = [
+  {path: 'glossaire', component: GlossaireComponent},
   {path: 'about', component: AboutComponent},
   {path: 'curiosities', component: CuriositiesComponent},
   {path: 'phylogeneticTree', component: PhylogeneticTreeComponent},
@@ -51,7 +56,8 @@ const routes: Routes = [
     ReserveDomTomComponent,
     ReserveAtlantiqueComponent,
     ReservePacifiqueComponent,
-    ReserveMediterranneeComponent
+    ReserveMediterranneeComponent,
+    GlossaireComponent
     ],
   imports: [
     BrowserModule,
@@ -59,7 +65,10 @@ const routes: Routes = [
     DividerModule,
     ChipModule,
     CardModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ScrollPanelModule,
+    FormsModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
