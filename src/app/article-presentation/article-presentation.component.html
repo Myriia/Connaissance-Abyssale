@@ -5,7 +5,8 @@
         </ng-template>
         <p-divider class="p-m-0"></p-divider>
         <div class="content">
-          <p><p-chip [label]="article.type"></p-chip>{{article.content}}</p>
+            <p>
+                <p-chip *ngFor="let type of article.types" [label]="type"></p-chip>{{article.content}}</p>
         </div>
         <p class="read-more">lire plus</p>
     </p-card>

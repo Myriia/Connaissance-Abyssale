@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TYPE_ARTICLE } from 'src/app/article';
 
 @Component({
   selector: 'ca-phylogenetic-tree',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhylogeneticTreeComponent implements OnInit {
 
+  type: TYPE_ARTICLE = TYPE_ARTICLE.ARBRE_PHYLO;
   constructor() { }
 
   ngOnInit(): void {

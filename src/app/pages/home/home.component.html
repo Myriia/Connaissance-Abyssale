@@ -7,8 +7,8 @@
         <img class="image-home" [src]="'../assets/' + imageHome" />
     </section>
     <section class="flex">
-        <div class="article-presentation" *ngFor="let index of articlesHomePage">
-            <ca-article-presentation [article]="getArticleById(index)"></ca-article-presentation>
+        <div class="article-presentation" *ngFor="let article of articles">
+            <ca-article-presentation [article]="article"></ca-article-presentation>
         </div>
     </section>
 </article>

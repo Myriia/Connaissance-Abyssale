@@ -4,11 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import {DropdownModule} from 'primeng/dropdown';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 import { CardModule } from "primeng/card";
 import { DividerModule } from "primeng/divider";
 import { ChipModule } from "primeng/chip";
 import {MenubarModule} from 'primeng/menubar';
-import {PaginatorModule} from 'primeng/paginator';
+import {DataViewModule} from 'primeng/dataview';
 
 
 import { AboutComponent } from './pages/about/about.component';
@@ -23,6 +26,8 @@ import { ReserveDomTomComponent } from './pages/reserve-side/reserve-dom-tom/res
 import { ReserveAtlantiqueComponent } from './pages/reserve-side/reserve-atlantique/reserve-atlantique.component';
 import { ReservePacifiqueComponent } from './pages/reserve-side/reserve-pacifique/reserve-pacifique.component';
 import { ReserveMediterranneeComponent } from './pages/reserve-side/reserve-mediterrannee/reserve-mediterrannee.component';
+import { DataViewComponent } from './data-view/data-view.component';
+import { HeaderDataViewComponent } from './header-data-view/header-data-view.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -52,7 +57,9 @@ const routes: Routes = [
     ReserveDomTomComponent,
     ReserveAtlantiqueComponent,
     ReservePacifiqueComponent,
-    ReserveMediterranneeComponent
+    ReserveMediterranneeComponent,
+    DataViewComponent,
+    HeaderDataViewComponent
     ],
   imports: [
     BrowserModule,
@@ -60,7 +67,10 @@ const routes: Routes = [
     DividerModule,
     ChipModule,
     CardModule,
-    PaginatorModule,
+    DataViewModule,
+    DropdownModule,
+    ButtonModule,
+    InputTextModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

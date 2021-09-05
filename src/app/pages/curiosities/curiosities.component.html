@@ -1,5 +1,3 @@
-<h1>Hello pagination</h1>
-<div class="article-presentation" *ngFor="let index of articlesToDisplay">
-    <ca-article-presentation [article]="getArticleById(index)"></ca-article-presentation>
-</div>
-<p-paginator [rows]="nbElementsToDisplayPerPage" [totalRecords]="nbElementsTotal" (onPageChange)="paginate($event)"></p-paginator>
+<article>
+    <ca-data-view [type]='type'></ca-data-view>
+</article>
