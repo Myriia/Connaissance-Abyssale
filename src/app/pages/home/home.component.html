@@ -4,7 +4,7 @@
         <h1>de bienvenue</h1>
     </div>
     <section>
-        <img class="image-home" [src]="'../assets/' + imageHome" />
+        <img class="image-home" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
     </section>
     <section class="flex">
         <div class="article-presentation" *ngFor="let article of articles">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {glossaire} from "../../glossaire";
+import {online} from "../../config";
 
 @Component({
   selector: 'app-glossaire',
@@ -14,6 +15,7 @@ export class GlossaireComponent implements OnInit {
   definition: string | null | undefined;
   img: string | null | undefined;
   filtre: string | null | undefined;
+  online = online;
 
   ngOnInit() {
     this.glossaire = this.glossaire.sort((a: { word: string; }, b: { word: any; }) => a.word.localeCompare(b.word));
