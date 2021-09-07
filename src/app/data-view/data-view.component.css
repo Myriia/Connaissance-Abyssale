@@ -1,0 +1,8 @@
+.article-presentation {
+    width: 33%;
+}
+
+:host>>>.p-grid {
+    display: flex;
+    flex-wrap: wrap;
+}

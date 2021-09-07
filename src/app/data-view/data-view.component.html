@@ -1,0 +1,7 @@
+<p-dataView [value]="articles" [paginator]="true" [rows]="9" layout="grid">
+    <ng-template let-article pTemplate="gridItem">
+        <div class="article-presentation">
+            <ca-article-presentation [article]="article"></ca-article-presentation>
+        </div>
+    </ng-template>
+</p-dataView>

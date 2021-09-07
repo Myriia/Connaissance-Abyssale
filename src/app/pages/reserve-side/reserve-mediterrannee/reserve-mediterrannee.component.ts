@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TYPE_ARTICLE } from 'src/app/article';
 
 @Component({
   selector: 'ca-reserve-mediterrannee',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReserveMediterranneeComponent implements OnInit {
 
+  type: TYPE_ARTICLE = TYPE_ARTICLE.MEDITERRANNEE;
+  
   constructor() { }
 
   ngOnInit(): void {

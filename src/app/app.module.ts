@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { Routes, RouterModule } from '@angular/router';
+import {DropdownModule} from 'primeng/dropdown';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 import { CardModule } from "primeng/card";
 import { DividerModule } from "primeng/divider";
 import { ChipModule } from "primeng/chip";
 import {MenubarModule} from 'primeng/menubar';
+import {DataViewModule} from 'primeng/dataview';
 
 
 import { AboutComponent } from './pages/about/about.component';
@@ -22,10 +26,11 @@ import { ReserveDomTomComponent } from './pages/reserve-side/reserve-dom-tom/res
 import { ReserveAtlantiqueComponent } from './pages/reserve-side/reserve-atlantique/reserve-atlantique.component';
 import { ReservePacifiqueComponent } from './pages/reserve-side/reserve-pacifique/reserve-pacifique.component';
 import { ReserveMediterranneeComponent } from './pages/reserve-side/reserve-mediterrannee/reserve-mediterrannee.component';
+import { DataViewComponent } from './data-view/data-view.component';
+import { HeaderDataViewComponent } from './header-data-view/header-data-view.component';
 import {GlossaireComponent} from "./pages/glossaire/glossaire.component";
 import {ScrollPanelModule} from "primeng/scrollpanel";
 import {FormsModule} from "@angular/forms";
-import {InputTextModule} from 'primeng/inputtext';
 
 const routes: Routes = [
   {path: 'glossaire', component: GlossaireComponent},
@@ -57,6 +62,8 @@ const routes: Routes = [
     ReserveAtlantiqueComponent,
     ReservePacifiqueComponent,
     ReserveMediterranneeComponent,
+    DataViewComponent,
+    HeaderDataViewComponent,
     GlossaireComponent
     ],
   imports: [
@@ -65,10 +72,13 @@ const routes: Routes = [
     DividerModule,
     ChipModule,
     CardModule,
+    DataViewModule,
+    DropdownModule,
+    ButtonModule,
+    InputTextModule,
     RouterModule.forRoot(routes),
     ScrollPanelModule,
-    FormsModule,
-    InputTextModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
