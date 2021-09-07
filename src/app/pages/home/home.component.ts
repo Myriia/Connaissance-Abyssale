@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import {articles, articles_home_page, image_home_page, index_specified_item_no_found} from "../../article";
+import {Article, articles, image_home_page, TYPE_ARTICLE} from "../../article";
+import {online} from "../../config";
 
 @Component({
-  selector: 'app-home',
+  selector: 'ca-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
-  articlesHomePage = articles_home_page
+  type = TYPE_ARTICLE.LA_UNE;
+  articles: Article[] = [];
   imageHome=image_home_page;
+  online=online;
   constructor() { }
 
   ngOnInit(): void {
+    this.articles = articles.filter(article => article.types?.includes(this.type));
   }
 
-  getArticleById(id:number): any{
-    let articleIndex = articles.findIndex(article => article.id === id);
-    return articles[articleIndex === -1 ? index_specified_item_no_found : articleIndex];
-}
 }

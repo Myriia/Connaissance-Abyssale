@@ -3,12 +3,12 @@
         <h1>Texte</h1>
         <h1>de bienvenue</h1>
     </div>
-    <section class="section-background">
-        <img class="image-home" [src]="'../assets/' + imageHome" />
+    <section>
+        <img class="image-home" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
     </section>
     <section class="flex">
-        <div class="article-presentation" *ngFor="let index of articlesHomePage">
-            <ca-article-presentation [article]="getArticleById(index)"></ca-article-presentation>
+        <div class="article-presentation" *ngFor="let article of articles">
+            <ca-article-presentation [article]="article"></ca-article-presentation>
         </div>
     </section>
 </article>

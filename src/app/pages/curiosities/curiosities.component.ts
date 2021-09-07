@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { TYPE_ARTICLE } from 'src/app/article';
 
 @Component({
-  selector: 'app-curiosities',
+  selector: 'ca-curiosities',
   templateUrl: './curiosities.component.html',
   styleUrls: ['./curiosities.component.css']
 })
@@ -9,7 +10,8 @@ export class CuriositiesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  type = TYPE_ARTICLE.CURIOSITE;
 
+  ngOnInit(): void {  
+  }
 }

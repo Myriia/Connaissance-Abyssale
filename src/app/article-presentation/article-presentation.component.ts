@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {online} from "../config";
 
 @Component({
   selector: 'ca-article-presentation',
@@ -9,7 +10,8 @@ export class ArticlePresentationComponent implements OnInit {
 
   @Input()
   article: any;
-  
+  online = online;
+
   constructor() { }
 
   ngOnInit(): void {
