@@ -30,10 +30,10 @@ export class MenuComponent implements OnInit {
         },
         {
           label:'Méditerrannée', routerLink:'mediterrannee'
-        }, 
+        },
         {
           label:'Atlantique', routerLink:'atlantique'
-        }, 
+        },
         {
           label:'Pacifique', routerLink:'pacifique'
         }
@@ -50,6 +50,9 @@ export class MenuComponent implements OnInit {
     },
     {
       label: 'A Propos', routerLink: 'about'
+    },
+    {
+      label: 'Glossaire', routerLink: 'glossaire'
     }
   ];
 

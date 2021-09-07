@@ -28,8 +28,12 @@ import { ReservePacifiqueComponent } from './pages/reserve-side/reserve-pacifiqu
 import { ReserveMediterranneeComponent } from './pages/reserve-side/reserve-mediterrannee/reserve-mediterrannee.component';
 import { DataViewComponent } from './data-view/data-view.component';
 import { HeaderDataViewComponent } from './header-data-view/header-data-view.component';
+import {GlossaireComponent} from "./pages/glossaire/glossaire.component";
+import {ScrollPanelModule} from "primeng/scrollpanel";
+import {FormsModule} from "@angular/forms";
 
 const routes: Routes = [
+  {path: 'glossaire', component: GlossaireComponent},
   {path: 'about', component: AboutComponent},
   {path: 'curiosities', component: CuriositiesComponent},
   {path: 'phylogeneticTree', component: PhylogeneticTreeComponent},
@@ -60,6 +64,7 @@ const routes: Routes = [
     ReserveMediterranneeComponent,
     DataViewComponent,
     HeaderDataViewComponent
+    GlossaireComponent
     ],
   imports: [
     BrowserModule,
@@ -71,7 +76,9 @@ const routes: Routes = [
     DropdownModule,
     ButtonModule,
     InputTextModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ScrollPanelModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
