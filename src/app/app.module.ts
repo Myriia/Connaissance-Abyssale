@@ -21,16 +21,13 @@ import { PhylogeneticTreeComponent } from './pages/phylogenetic-tree/phylogeneti
 import { WhatIfComponent } from './pages/what-if/what-if.component';
 import { MenuComponent } from './menu/menu.component';
 import { ArticlePresentationComponent } from './article-presentation/article-presentation.component';
-import { ReserveMetropoleComponent } from './pages/reserve-side/reserve-metropole/reserve-metropole.component';
-import { ReserveDomTomComponent } from './pages/reserve-side/reserve-dom-tom/reserve-dom-tom.component';
-import { ReserveAtlantiqueComponent } from './pages/reserve-side/reserve-atlantique/reserve-atlantique.component';
-import { ReservePacifiqueComponent } from './pages/reserve-side/reserve-pacifique/reserve-pacifique.component';
-import { ReserveMediterranneeComponent } from './pages/reserve-side/reserve-mediterrannee/reserve-mediterrannee.component';
 import { DataViewComponent } from './data-view/data-view.component';
 import { HeaderDataViewComponent } from './header-data-view/header-data-view.component';
 import {GlossaireComponent} from "./pages/glossaire/glossaire.component";
 import {ScrollPanelModule} from "primeng/scrollpanel";
 import {FormsModule} from "@angular/forms";
+import {BiomimetismeComponent} from "./pages/biomimetisme/biomimetisme.component";
+import {ProtectionEtConservationComponent} from "./pages/protection-et-conservation/protection-et-conservation.component";
 
 const routes: Routes = [
   {path: 'glossaire', component: GlossaireComponent},
@@ -39,14 +36,10 @@ const routes: Routes = [
   {path: 'phylogeneticTree', component: PhylogeneticTreeComponent},
   {path: 'whatIf', component: WhatIfComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'metropole', component:ReserveMetropoleComponent},
-  {path: 'domtom', component:ReserveDomTomComponent},
-  {path: 'atlantique', component:ReserveAtlantiqueComponent},
-  {path: 'pacifique', component:ReservePacifiqueComponent},
-  {path: 'mediterrannee', component:ReserveMediterranneeComponent},
+  {path: 'biomimetisme', component:BiomimetismeComponent},
+  {path: 'protectionEtConservation', component:ProtectionEtConservationComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
-
 
 @NgModule({
   declarations: [
@@ -57,14 +50,11 @@ const routes: Routes = [
     WhatIfComponent,
     MenuComponent,
     ArticlePresentationComponent,
-    ReserveMetropoleComponent,
-    ReserveDomTomComponent,
-    ReserveAtlantiqueComponent,
-    ReservePacifiqueComponent,
-    ReserveMediterranneeComponent,
     DataViewComponent,
     HeaderDataViewComponent,
-    GlossaireComponent
+    GlossaireComponent,
+    BiomimetismeComponent,
+    ProtectionEtConservationComponent
     ],
   imports: [
     BrowserModule,
