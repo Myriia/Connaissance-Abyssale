@@ -1,0 +1,50 @@
+<div *ngIf="article">
+  <article>
+    <!-- Title -->
+    <h1 class="flex justify-content-center mb-0 title">Grande nacre</h1>
+    <h3 class="flex justify-content-center mt-0 mb-0">(<i>Pinna nobilis</i>)</h3>
+    <div class="flex justify-content-center mt-0 mb-7">
+      <div class="mt-2 ml-2 mr-2" *ngFor="let type of article.types" >
+        <p-chip [label]="type"></p-chip>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="flex mb-5">
+      <div class="col-4 align-self-center">
+        <img width="100%" alt="Dessin d'une grande nacre" height="auto" class="resize_fit_center" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + 'nacre.png'"/>
+      </div>
+      <div class="col-8 pb-8 pl-8">
+          La grande nacre peut mesurer jusqu’à 1m20 une fois adulte. Elle est implantée dans le sédiment et inclinée vers le courant pour optimiser la filtration de l’eau qui approche les 6.5 litres par jour. Ce système lui permet  de se nourrir de particules vivantes (plancton) ou mortes (matière organique en suspension).
+          <br>
+          Sur le site où nous allons plonger, elle est présente au niveau des 3 graus (passages qui permettent une communication entre les eaux maritimes et les eaux intérieures).
+          <br>
+          Il s’agit d’une espèce endémique du bassin  méditerranéen. Comme le mérou, la surpêche a failli causer son extinction, c’est pourquoi elle est protégée depuis 1992.  Aujourd’hui elle est grandement menacée (Statut IUCN : Danger critique d’extinction) par un parasite qui a provoqué une épidémie massive en 2016.
+      </div>
+    </div>
+
+    <!-- Biblio -->
+    <div class="pl-8 pr-8 mb-5">
+      <p-fieldset [collapsed]="true" legend="Pour plus de renseignements voici la bibliographie consultée :" [toggleable]="true" >
+        ANON., 2019a. Crise de la Grande Nacre en Méditerranée ( Pinna nobilis ) - Mise à jour janvier 2021. In : UICN [en ligne]. 5 juillet 2019.
+        <br/>[Consulté le 24 septembre 2021]. Disponible à l’adresse : https://www.iucn.org/fr/news/mediterranean/201907/crise-de-la-grande-nacre-enmediterranee-pinna-nobilis-mise-a-jour-janvier-2021.
+        <br/><br/>
+        ANON., 2019b. L’étang de Leucate et ses hippocampes catalans. In : Plongée avec Olivier [en ligne]. 23 novembre 2019.
+        <br/>[Consulté le 23 septembre 2021]. Disponible à l’adresse : https://plongeeavecolivier.fr/letang-de-leucate-et-ses-hippocampes-catalans/.
+        <br/><br/>
+        ANON., [sans date]. INPN - L’inventaire ZNIEFF. In : [en ligne]. [Consulté le 23 septembre 2021]. Disponible à l’adresse :
+        <br/>https://inpn.mnhn.fr/programme/inventaire-znieff/presentation.
+        <br/><br/>
+        BARRABES, Miche, ADER, Denis et LOUISY, Patrick, 2020. Hippocampus hippocampus | DORIS. In : [en ligne]. 8 novembre 2020.
+        <br/>[Consulté le 24 septembre 2021]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Hippocampus-hippocampus-Hippocampe-a-museaucourt-299/(rOffset)/0.
+        <br/><br/>
+        BARRABES, Michel, ADER, Denis et LOUISY, Patrick, 2020. Hippocampus guttulatus | DORIS. In : [en ligne]. 8 novembre 2020.
+        <br/>[Consulté le 24 septembre 2021]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Hippocampus-guttulatus-Hippocampe-mouchete302/(rOffset)/0.
+        <br/><br/>
+        LOUISY, Patrick et BÉRENGER, Lucas, 2015. Hippocampes et syngnathes du Golfe du Lion : état des connaissances. In : . 2015. pp. 94.
+        <br/><br/>
+        SYNDICAT MIXTE RIVAGE, [sans date]. L’écologie de l’étang ‹ Syndicat Mixte Rivage. In : [en ligne]. [Consulté le 23 septembre 2021].
+        <br/>Disponible à l’adresse : https://rivage-salses-leucate.org/le-territoire-du-bassin-de-salses-leucate/etang-de-salses-leucate/milieux/.
+      </p-fieldset>
+    </div>
+  </article>
+</div>

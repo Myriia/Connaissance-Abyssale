@@ -28,8 +28,17 @@ import {ScrollPanelModule} from "primeng/scrollpanel";
 import {FormsModule} from "@angular/forms";
 import {BiomimetismeComponent} from "./pages/biomimetisme/biomimetisme.component";
 import {ProtectionEtConservationComponent} from "./pages/protection-et-conservation/protection-et-conservation.component";
+import {TitleComponent} from "./title/title.component";
+import {Article0001Component} from "./articles/article-0001/article-0001.component";
+import {ArticleComponent} from "./articles/article/article.component";
+import {FieldsetModule} from "primeng/fieldset";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ChartModule} from "primeng/chart";
+import {Article0003Component} from "./articles/article-0003/article-0003.component";
+import {Article0002Component} from "./articles/article-0002/article-0002.component";
 
 const routes: Routes = [
+  {path: 'article/:id', component: ArticleComponent},
   {path: 'glossaire', component: GlossaireComponent},
   {path: 'about', component: AboutComponent},
   {path: 'curiosities', component: CuriositiesComponent},
@@ -54,8 +63,13 @@ const routes: Routes = [
     HeaderDataViewComponent,
     GlossaireComponent,
     BiomimetismeComponent,
-    ProtectionEtConservationComponent
-    ],
+    ProtectionEtConservationComponent,
+    TitleComponent,
+    Article0001Component,
+    Article0002Component,
+    Article0003Component,
+    ArticleComponent
+  ],
   imports: [
     BrowserModule,
     MenubarModule,
@@ -68,7 +82,10 @@ const routes: Routes = [
     InputTextModule,
     RouterModule.forRoot(routes),
     ScrollPanelModule,
-    FormsModule
+    FormsModule,
+    FieldsetModule,
+    BrowserAnimationsModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
