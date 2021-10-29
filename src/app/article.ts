@@ -5,11 +5,8 @@ enum TYPE_ARTICLE {
   Si_J_ETAIS = 'Si j\'étais',
   ARBRE_PHYLO = 'Arbre Phylogénétique',
   LA_UNE = 'A la une',
-  PACIFIQUE = 'Pacifique',
-  ATLANTIQUE = 'Atlantique',
-  MEDITERRANNEE = 'Méditerrannée',
-  DOMTOM = 'DomTom',
-  METROPOLE = 'Métropole',
+  PROTECTION_ET_CONSERVATION = 'Protection et Conservation',
+  BIOMIMETISME = 'Biomimétisme',
   NO = 'no'
 }
 
@@ -32,168 +29,32 @@ const articles: Article[] = [
     types : [TYPE_ARTICLE.NO],
   },{
     id : 1,
-    title : 'Un titre d\'article sur la vie sous marine',
+    title : 'Grande nacre',
     content : [
-      'Ceci est la première partie de l\'article. Un article est découpé en partie et seulement la première peut apparaitre ici.',
+      'La grande nacre peut mesurer jusqu’à 1m20 une fois adulte. Elle est implantée dans le sédiment et inclinée vers le courant pour optimiser la filtration de l’eau qui approche les 6.5 litres par jour. Ce système lui permet  de se nourrir de particules vivantes (plancton) ou mortes (matière organique en suspension).',
     ],
-    img_article_presentation : 'img5.png',
+    img_article_presentation : 'grande_nacre_1.jpg',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 2,
-    title : 'Bonjour, je suis un article',
+    title : 'Hippocampe à museau court',
     content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
+      'Les hippocampes à museau court ont une taille qui varie entre 11 et 15 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est entre 2 et 2.5 fois plus long que haut. La crête triangulaire présente sur leur tête permet d’idenpngier cette espèce. Ils possèdent aussi des courtes cornes au-dessus des yeux. Leur couleur est variable, ils sont capables de mimer la couleur de leur environnement pour se camoufler.',
     ],
-    img_article_presentation : 'img6.jpg',
-    types : [TYPE_ARTICLE.Si_J_ETAIS, TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
-  },
-  {
+    img_article_presentation : 'museau_court.png',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
     id : 3,
-    title : 'Bonjour, je suis un article',
+    title : 'Hippocampe moucheté',
     content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
+      'Les hippocampes mouchetés ont une taille qui varie entre 12 et 16 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est plus de trois fois plus long que haut et bien plus fin que celui de l’espèce précédente. Ces hippocampes possèdent des longs filaments cutanés sur la tête et sur le dos ce qui est un critère de reconnaissance avec la forme du museau. Mais attention, ce n’est pas parce qu’il n’y a pas de filaments que ce n’est pas un hippocampe moucheté ! La coloration de cette espèce varie du brun foncé au jaune, avec une présence de taches blanches sur le corps.',
     ],
-    img_article_presentation : 'img1.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 4,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img2.png',
-    types : [TYPE_ARTICLE.ARBRE_PHYLO, TYPE_ARTICLE.LA_UNE],
-  },
-  {
-    id : 5,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img0.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 6,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img3.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 7,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img4.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 8,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img8.jpg',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 9,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img5.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 10,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img0.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 11,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img3.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 12,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img1.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 13,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img2.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 14,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img1.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 15,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img2.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 16,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img1.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 17,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img2.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },
-  {
-    id : 9,
-    title : 'Bonjour, je suis un article',
-    content : [
-      'En grammaire traditionnelle, l’article a plusieurs définitions. Selon l’une d’elles, c’est une partie du discours à fonction grammaticale, qui accompagne le nom dans certaines langues, indiquant dans quelle mesure ce que celui-ci dénomme est connu des participants à une situation de communication donnée.',
-    ],
-    img_article_presentation : 'img5.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
+    img_article_presentation : 'Hipp_mouchete.png',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
 ];
 
-const title = 'Mamie Cameroun';
+const title = 'Connaissance Abyssale';
 const image_home_page = 'img8.jpg';
 
 export {title, NO_IMAGE, Article, articles, image_home_page, TYPE_ARTICLE} ;
