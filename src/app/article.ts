@@ -33,7 +33,7 @@ const articles: Article[] = [
     content : [
       'La grande nacre peut mesurer jusqu’à 1m20 une fois adulte. Elle est implantée dans le sédiment et inclinée vers le courant pour optimiser la filtration de l’eau qui approche les 6.5 litres par jour. Ce système lui permet  de se nourrir de particules vivantes (plancton) ou mortes (matière organique en suspension).',
     ],
-    img_article_presentation : 'grande_nacre_1.jpg',
+    img_article_presentation : 'nacre.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 2,
@@ -55,6 +55,6 @@ const articles: Article[] = [
 ];
 
 const title = 'Connaissance Abyssale';
-const image_home_page = 'img8.jpg';
+const image_home_page = 'bandeau_site_internet.jpg';
 
 export {title, NO_IMAGE, Article, articles, image_home_page, TYPE_ARTICLE} ;

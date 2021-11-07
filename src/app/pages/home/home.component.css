@@ -1,14 +1,18 @@
 .image-home {
     height: 300px;
     object-fit: cover;
-    width: 70%;
+    width: 100%;
 }
 
 .text-welcome {
     position: absolute;
     text-align: right;
     width: 75%;
-    right: 20%;
+    right: 40%;
+}
+
+h1{
+  color: white;
 }
 
 .article-presentation {
