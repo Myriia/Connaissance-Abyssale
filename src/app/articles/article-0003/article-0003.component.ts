@@ -16,39 +16,7 @@ export class Article0003Component implements OnInit {
 
   constructor() { }
 
-  data: any;
-  chartOptions:any;
-
   ngOnInit() {
     this.article = articles.find(article => this.id === article.id);
-
-    this.data = {
-      labels: ['Mollusques','Crustacés','Annelides', 'Autres'],
-      datasets: [
-        {
-          data: [40, 20, 10, 30],
-          backgroundColor: [
-            "#568736",
-            "#68A242",
-            "#90BB7A",
-            "#BED5B4"
-          ],
-          hoverBackgroundColor: [
-            "#568736",
-            "#68A242",
-            "#90BB7A",
-            "#BED5B4"
-          ]
-        }
-      ]
-    };
-    this.chartOptions = {plugins: {
-        legend: {
-          labels: {
-            color: '#495057'
-          }
-        }
-      }
-    };
   }
 }
