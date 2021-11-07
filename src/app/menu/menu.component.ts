@@ -15,32 +15,13 @@ export class MenuComponent implements OnInit {
       label: 'Accueil', routerLink: 'home'
     },
     {
-      label: 'Côté Réserve',
-      items:[
-        {
-          label:'France', styleClass:'franceLabel',
-          items:[
-            {
-              label:'Métropole', routerLink: 'metropole'
-            },
-            {
-              label:'DOM/TOM', routerLink:'domtom'
-            }
-          ]
-        },
-        {
-          label:'Méditerrannée', routerLink:'mediterrannee'
-        },
-        {
-          label:'Atlantique', routerLink:'atlantique'
-        },
-        {
-          label:'Pacifique', routerLink:'pacifique'
-        }
-      ]
+      label: 'Protection et Conservation', routerLink: 'protectionEtConservation'
     },
     {
       label: 'Les Curiosités', routerLink: 'curiosities'
+    },
+    {
+      label: 'Biomimétisme', routerLink: 'biomimetisme'
     },
     {
       label: 'Si j\'étais', routerLink: 'whatIf'

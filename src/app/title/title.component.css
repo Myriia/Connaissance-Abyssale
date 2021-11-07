@@ -1,0 +1,12 @@
+.logo{
+  top: 0;
+  left: 0;
+  border-radius: 90px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.url{
+  text-decoration:none;
+}

@@ -1,12 +1,11 @@
 <div *ngIf="article" class="p-2">
-    <p-card [header]="article.title" styleClass="p-card-shadow" [style]="{width:'100%',height: '31.2em'}">
+    <p-card [routerLink]="['/article', article.id ]" [header]="article.title" styleClass="p-card-shadow" [style]="{width:'100%',height: '31.2em'}">
         <ng-template pTemplate="header">
             <img class="resize_fit_center" alt="Image représentant un article" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + article.img_article_presentation">
         </ng-template>
         <p-divider class="p-m-0"></p-divider>
         <div class="content">
-            <p>
-                <p-chip *ngFor="let type of article.types" [label]="type"></p-chip>{{article.content}}</p>
+            <p><p-chip *ngFor="let type of article.types" [label]="type"></p-chip>{{article.content}}</p>
         </div>
         <p class="read-more">lire plus</p>
     </p-card>
