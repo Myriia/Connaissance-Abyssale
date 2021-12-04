@@ -36,6 +36,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ChartModule} from "primeng/chart";
 import {Article0003Component} from "./articles/article-0003/article-0003.component";
 import {Article0002Component} from "./articles/article-0002/article-0002.component";
+import {AccordionModule} from "primeng/accordion";
 
 const routes: Routes = [
   {path: 'article/:id', component: ArticleComponent},
@@ -71,6 +72,7 @@ const routes: Routes = [
     ArticleComponent
   ],
   imports: [
+    AccordionModule,
     BrowserModule,
     MenubarModule,
     DividerModule,

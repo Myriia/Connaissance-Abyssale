@@ -1,7 +1,7 @@
 <p-dataView [value]="articles" [paginator]="true" [rows]="9" layout="grid" emptyMessage="À venir...">
     <ng-template let-article pTemplate="gridItem">
-        <div class="article-presentation">
-            <ca-article-presentation [article]="article"></ca-article-presentation>
+        <div [ngClass]="screenSize == 'large'? 'article-presentation' : 'mb-2'">
+            <ca-article-presentation [screenSize]="screenSize" [article]="article"></ca-article-presentation>
         </div>
     </ng-template>
 </p-dataView>

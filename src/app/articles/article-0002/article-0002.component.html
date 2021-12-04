@@ -1,53 +1,60 @@
-<div *ngIf="article">
-  <article>
+<article *ngIf="article">
     <!-- Title -->
     <h1 class="flex justify-content-center mb-0 title">Hippocampe à museau court</h1>
-    <h3 class="flex justify-content-center mt-0 mb-0">(<i>Hippocampus hippocampus</i>)</h3>
+    <h3 class="flex justify-content-center mt-0 mb-0 font-italic">(Hippocampus hippocampus)</h3>
     <div class="flex justify-content-center mt-0 mb-7">
       <div class="mt-2 ml-2 mr-2" *ngFor="let type of article.types" >
         <p-chip [label]="type"></p-chip>
       </div>
     </div>
     <!-- Content -->
-    <div class="grid">
-      <div class="pr-8 col-8">
-        Les hippocampes à museau court ont une taille qui varie entre 11 et 15 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est entre 2 et 2.5 fois plus long que haut. La crête triangulaire présente sur leur tête permet d’idenpngier cette espèce. Ils possèdent aussi des courtes cornes au-dessus des yeux. Leur couleur est variable, ils sont capables de mimer la couleur de leur environnement pour se camoufler.
-        <br/><br/>
-        On reconnait les mâles par la présence d’une poche incubatrice, flasque ou rebondie selon la phase de reproduction, alors que la femelle garde la taille fine tout au long de l’année. La reproduction a lieu fin printemps/début été avec la formation de couples. Les mâles vont stoker les œufs fécondés dans leur poche incubatrice jusqu’à l’éclosion des larves. Une fois ce stade atteint, les jeunes poissons sont expulsés par de puissantes contractions abdominales. Les hippocampes sont une exception dans le règne animal car il s’agit des seules espèces connues où les mâles réalisent l’accouchement. On peut observer les petits hippocampes vers le mois d’août, ils ne mesurent alors que quelques centimètres. Ces jeunes de moins de 5cm sont présents jusqu’à la fin de l’hiver. Ils mesureront environ 10cm à l’été suivant et pourront dès lors se reproduire. Ils ont une espérance de vie de 4 à 5 ans.
-      </div>
-      <div class="col-4 align-self-center">
-        <img width="100%" alt="Dessin d'un hippocampe à museau" height="auto" class="" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + 'museau_court.png'"/>
-      </div>
-    </div>
-    <div class="mb-8">
-      Les hippocampes à museau court se nourrissent de zooplancton, de petits crustacés, de larves nauplius, d’œufs de poisson et de petits crustacés benthiques se déplaçant sur le fond. Pour se nourrir les hippocampes aspirent leurs proies à l’aide de leur bouche en forme de pipette
-      <br/>
-      Cette espèce d’hippocampe vie entre 0 et 10m sur un fond sableux que ça soit en mer ou dans les lagunes.
-    </div>
-
+    <span [ngSwitch]="screenSize">
+      <span *ngSwitchCase="'small'">
+          Les hippocampes à museau court ont une taille qui varie entre 11 et 15 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est entre 2 et 2.5 fois plus long que haut. La crête triangulaire présente sur leur tête permet d’idenpngier cette espèce. Ils possèdent aussi des courtes cornes au-dessus des yeux. Leur couleur est variable, ils sont capables de mimer la couleur de leur environnement pour se camoufler.
+          <br><br>
+          On reconnait les mâles par la présence d’une poche incubatrice, flasque ou rebondie selon la phase de reproduction, alors que la femelle garde la taille fine tout au long de l’année. La reproduction a lieu fin printemps/début été avec la formation de couples. Les mâles vont stoker les œufs fécondés dans leur poche incubatrice jusqu’à l’éclosion des larves. Une fois ce stade atteint, les jeunes poissons sont expulsés par de puissantes contractions abdominales. Les hippocampes sont une exception dans le règne animal car il s’agit des seules espèces connues où les mâles réalisent l’accouchement. On peut observer les petits hippocampes vers le mois d’août, ils ne mesurent alors que quelques centimètres. Ces jeunes de moins de 5cm sont présents jusqu’à la fin de l’hiver. Ils mesureront environ 10cm à l’été suivant et pourront dès lors se reproduire. Ils ont une espérance de vie de 4 à 5 ans.
+          <img width="100%" alt="Dessin d'un hippocampe à museau" height="auto" class="mt-4 mb-4" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + 'museau_court.png'"/>
+          Les hippocampes à museau court se nourrissent de zooplancton, de petits crustacés, de larves nauplius, d’œufs de poisson et de petits crustacés benthiques se déplaçant sur le fond. Pour se nourrir les hippocampes aspirent leurs proies à l’aide de leur bouche en forme de pipette
+          <br>
+          Cette espèce d’hippocampe vie entre 0 et 10m sur un fond sableux que ça soit en mer ou dans les lagunes.
+      </span>
+      <span *ngSwitchDefault class="grid">
+        <span class="pr-8 col-8">
+          Les hippocampes à museau court ont une taille qui varie entre 11 et 15 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est entre 2 et 2.5 fois plus long que haut. La crête triangulaire présente sur leur tête permet d’idenpngier cette espèce. Ils possèdent aussi des courtes cornes au-dessus des yeux. Leur couleur est variable, ils sont capables de mimer la couleur de leur environnement pour se camoufler.
+          <br><br>
+          On reconnait les mâles par la présence d’une poche incubatrice, flasque ou rebondie selon la phase de reproduction, alors que la femelle garde la taille fine tout au long de l’année. La reproduction a lieu fin printemps/début été avec la formation de couples. Les mâles vont stoker les œufs fécondés dans leur poche incubatrice jusqu’à l’éclosion des larves. Une fois ce stade atteint, les jeunes poissons sont expulsés par de puissantes contractions abdominales. Les hippocampes sont une exception dans le règne animal car il s’agit des seules espèces connues où les mâles réalisent l’accouchement. On peut observer les petits hippocampes vers le mois d’août, ils ne mesurent alors que quelques centimètres. Ces jeunes de moins de 5cm sont présents jusqu’à la fin de l’hiver. Ils mesureront environ 10cm à l’été suivant et pourront dès lors se reproduire. Ils ont une espérance de vie de 4 à 5 ans.
+        </span>
+        <span class="col-4 align-self-center">
+          <img width="100%" alt="Dessin d'un hippocampe à museau" height="auto" class="" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + 'museau_court.png'"/>
+        </span>
+        Les hippocampes à museau court se nourrissent de zooplancton, de petits crustacés, de larves nauplius, d’œufs de poisson et de petits crustacés benthiques se déplaçant sur le fond. Pour se nourrir les hippocampes aspirent leurs proies à l’aide de leur bouche en forme de pipette
+        <br>
+        Cette espèce d’hippocampe vie entre 0 et 10m sur un fond sableux que ça soit en mer ou dans les lagunes.
+      </span>
+    </span>
     <!-- Biblio -->
-    <div class="pl-8 pr-8 mb-5">
-      <p-fieldset [collapsed]="true" legend="Pour plus de renseignements voici la bibliographie consultée :" [toggleable]="true" >
-        ANON., 2019a. Crise de la Grande Nacre en Méditerranée ( Pinna nobilis ) - Mise à jour janvier 2021. In : UICN [en ligne]. 5 juillet 2019.
-        <br/>[Consulté le 24 septembre 2021]. Disponible à l’adresse : https://www.iucn.org/fr/news/mediterranean/201907/crise-de-la-grande-nacre-enmediterranee-pinna-nobilis-mise-a-jour-janvier-2021.
-        <br/><br/>
-        ANON., 2019b. L’étang de Leucate et ses hippocampes catalans. In : Plongée avec Olivier [en ligne]. 23 novembre 2019.
-        <br/>[Consulté le 23 septembre 2021]. Disponible à l’adresse : https://plongeeavecolivier.fr/letang-de-leucate-et-ses-hippocampes-catalans/.
-        <br/><br/>
-        ANON., [sans date]. INPN - L’inventaire ZNIEFF. In : [en ligne]. [Consulté le 23 septembre 2021]. Disponible à l’adresse :
-        <br/>https://inpn.mnhn.fr/programme/inventaire-znieff/presentation.
-        <br/><br/>
-        BARRABES, Miche, ADER, Denis et LOUISY, Patrick, 2020. Hippocampus hippocampus | DORIS. In : [en ligne]. 8 novembre 2020.
-        <br/>[Consulté le 24 septembre 2021]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Hippocampus-hippocampus-Hippocampe-a-museaucourt-299/(rOffset)/0.
-        <br/><br/>
-        BARRABES, Michel, ADER, Denis et LOUISY, Patrick, 2020. Hippocampus guttulatus | DORIS. In : [en ligne]. 8 novembre 2020.
-        <br/>[Consulté le 24 septembre 2021]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Hippocampus-guttulatus-Hippocampe-mouchete302/(rOffset)/0.
-        <br/><br/>
-        LOUISY, Patrick et BÉRENGER, Lucas, 2015. Hippocampes et syngnathes du Golfe du Lion : état des connaissances. In : . 2015. pp. 94.
-        <br/><br/>
-        SYNDICAT MIXTE RIVAGE, [sans date]. L’écologie de l’étang ‹ Syndicat Mixte Rivage. In : [en ligne]. [Consulté le 23 septembre 2021].
-        <br/>Disponible à l’adresse : https://rivage-salses-leucate.org/le-territoire-du-bassin-de-salses-leucate/etang-de-salses-leucate/milieux/.
-      </p-fieldset>
+    <div class="mb-5 mt-4">
+      <p-accordion>
+        <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
+          ANON., 2019a. Crise de la Grande Nacre en Méditerranée ( Pinna nobilis ) - Mise à jour janvier 2021. In : UICN [en ligne]. 5 juillet 2019.
+          <br>[Consulté le 24 septembre 2021]. Disponible à l’adresse : <a href="https://www.iucn.org/fr/news/mediterranean/201907/crise-de-la-grande-nacre-enmediterranee-pinna-nobilis-mise-a-jour-janvier-2021">lien</a>.
+          <br><br>
+          ANON., 2019b. L’étang de Leucate et ses hippocampes catalans. In : Plongée avec Olivier [en ligne]. 23 novembre 2019.
+          <br>[Consulté le 23 septembre 2021]. Disponible à l’adresse : <a href="https://plongeeavecolivier.fr/letang-de-leucate-et-ses-hippocampes-catalans/">lien</a>.
+          <br><br>
+          ANON., [sans date]. INPN - L’inventaire ZNIEFF. In : [en ligne]. [Consulté le 23 septembre 2021]. Disponible à l’adresse : <a href="https://inpn.mnhn.fr/programme/inventaire-znieff/presentation">lien</a>.
+          <br><br>
+          BARRABES, Miche, ADER, Denis et LOUISY, Patrick, 2020. Hippocampus hippocampus | DORIS. In : [en ligne]. 8 novembre 2020.
+          <br>[Consulté le 24 septembre 2021]. Disponible à l’adresse : <a href="https://doris.ffessm.fr/Especes/Hippocampus-hippocampus-Hippocampe-a-museaucourt-299/(rOffset)/0">lien</a>.
+          <br><br>
+          BARRABES, Michel, ADER, Denis et LOUISY, Patrick, 2020. Hippocampus guttulatus | DORIS. In : [en ligne]. 8 novembre 2020.
+          <br>[Consulté le 24 septembre 2021]. Disponible à l’adresse : <a href="https://doris.ffessm.fr/Especes/Hippocampus-guttulatus-Hippocampe-mouchete302/(rOffset)/0">lien</a>.
+          <br><br>
+          LOUISY, Patrick et BÉRENGER, Lucas, 2015. Hippocampes et syngnathes du Golfe du Lion : état des connaissances. In : . 2015. pp. 94.
+          <br><br>
+          SYNDICAT MIXTE RIVAGE, [sans date]. L’écologie de l’étang ‹ Syndicat Mixte Rivage. In : [en ligne]. [Consulté le 23 septembre 2021].
+          <br>Disponible à l’adresse : <a href="https://rivage-salses-leucate.org/le-territoire-du-bassin-de-salses-leucate/etang-de-salses-leucate/milieux/">lien</a>.
+        </p-accordionTab>
+      </p-accordion>
     </div>
-  </article>
-</div>
+</article>
