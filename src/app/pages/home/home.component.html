@@ -1,14 +1,31 @@
-<article>
+<div [ngSwitch]="screenSize">
+  <div *ngSwitchCase="'small'" class="ml-4 mr-4">
     <div class="text-welcome">
-        <h1>Texte</h1>
-        <h1>de bienvenue</h1>
+      <h1>Texte</h1>
+      <h1>de bienvenue</h1>
     </div>
-  <img alt="image d'accueil" class="image-home" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
-  <section>
-      <div class="flex justify-content-center">
-        <div class="article-presentation" *ngFor="let article of articles">
-          <ca-article-presentation [article]="article"></ca-article-presentation>
+    <img alt="image d'accueil" class="image-home" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
+    <div [ngSwitch]="screenSize" class="mt-2 mb-4">
+        <div class="mb-2" *ngFor="let article of articles">
+          <ca-article-presentation [screenSize]="screenSize" [article]="article"></ca-article-presentation>
+        </div>
+    </div>
+  </div>
+  <article *ngSwitchDefault>
+    <div class="text-welcome">
+      <h1>Texte</h1>
+      <h1>de bienvenue</h1>
+    </div>
+    <img alt="image d'accueil" class="image-home" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
+    <div [ngSwitch]="screenSize" class="mt-2 mb-4">
+      <div *ngSwitchCase="'high'" class="flex">
+        <ca-article-presentation *ngFor="let article of articles" class="article-presentation" [article]="article"></ca-article-presentation>
+      </div>
+      <div *ngSwitchCase="'medium'">
+        <div class="mb-2" *ngFor="let article of articles">
+          <ca-article-presentation [screenSize]="screenSize" [article]="article"></ca-article-presentation>
         </div>
       </div>
-    </section>
-</article>
+    </div>
+  </article>
+</div>

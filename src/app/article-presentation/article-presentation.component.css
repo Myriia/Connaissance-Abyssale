@@ -27,11 +27,19 @@
     width: 100%;
     text-align: right;
     font-weight: bold;
+    margin: 0;
 }
 
-.content {
-    text-overflow: ellipsis;
-    display: inline-block;
-    height: 7.2em;
-    overflow: hidden;
+.content-high {
+  text-overflow: ellipsis;
+  display: inline-block;
+  height: 8.5em;
+  overflow: hidden;
+}
+
+.content-default {
+  text-overflow: ellipsis;
+  display: inline-block;
+  height: 10.4em;
+  overflow: hidden;
 }

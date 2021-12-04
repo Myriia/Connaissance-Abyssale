@@ -1,0 +1,7 @@
+.article-medium-high{
+  width: 60%;
+  margin: 0 20%;
+}
+.resize_fit_center {
+  object-fit: cover;
+}

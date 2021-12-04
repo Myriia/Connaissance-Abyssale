@@ -16,5 +16,16 @@ h1{
 }
 
 .article-presentation {
-    width: 33%;
+    width: 33.3333%;
+    margin: 0 5px;
+}
+.article-presentation:first-child{
+  margin: 0 5px 0 0;
+}
+
+.article-presentation:last-child{
+  margin: 0 0 0 5px;
+}
+.title-small{
+  font-size: 1em;
 }

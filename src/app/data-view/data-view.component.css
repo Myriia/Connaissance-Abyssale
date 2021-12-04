@@ -1,8 +1,11 @@
 .article-presentation {
-    width: 33%;
+  width: 31.333%;
+  margin: 0 1%;
 }
-
 :host>>>.p-grid {
     display: flex;
     flex-wrap: wrap;
+}
+:host>>>.p-dataview .p-dataview-content{
+  background-color: #F9F9F9;
 }

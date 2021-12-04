@@ -10,6 +10,9 @@ export class ArticlePresentationComponent implements OnInit {
 
   @Input()
   article: any;
+  @Input()
+  screenSize: string = "high";
+
   online = online;
 
   constructor() { }

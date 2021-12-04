@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {online} from "../config";
 
 @Component({
@@ -7,6 +7,9 @@ import {online} from "../config";
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent {
+
+  @Input()
+  screenSize: string = "high";
 
   constructor() { }
 

@@ -11,6 +11,9 @@ export class Article0001Component implements OnInit {
 
   @Input()
   id: number | undefined;
+  @Input()
+  screenSize: string | undefined = "high";
+
   article: Article | undefined;
   online = online;
 
