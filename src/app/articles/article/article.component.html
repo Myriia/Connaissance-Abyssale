@@ -1,5 +1,13 @@
 <div>
-  <ca-article-0001 *ngIf="id==1" [id]="id"></ca-article-0001>
-  <ca-article-0002 *ngIf="id==2" [id]="id"></ca-article-0002>
-  <ca-article-0003 *ngIf="id==3" [id]="id"></ca-article-0003>
+  <img *ngIf="id == 1" width="100%" alt="Bannière de l'article sur les grandes nacres"
+       class="resize_fit_center mb-2" height="150px"
+       [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+        (id==1 ? 'grande_nacre_1.jpg' : '')"/>
+
+  <div>
+    <ca-article-0001 [screenSize]="screenSize" *ngIf="id==1" [id]="id"></ca-article-0001>
+    <ca-article-0002 [screenSize]="screenSize" *ngIf="id==2" [id]="id"></ca-article-0002>
+    <ca-article-0003 [screenSize]="screenSize" *ngIf="id==3" [id]="id"></ca-article-0003>
+  </div>
+
 </div>
