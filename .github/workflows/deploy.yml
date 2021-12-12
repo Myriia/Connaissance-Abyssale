@@ -28,7 +28,7 @@ jobs:
  
       - name: File storage
         run: |
-          cp -a necessary/. connaissances-abyssales/docs
+          cp -a necessary/. docs
           
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1
