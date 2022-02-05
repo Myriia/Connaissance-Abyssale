@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {online} from "../../config";
+import {online} from "../config";
 import {ActivatedRoute} from "@angular/router";
+import {Article, articles} from "../article";
 
 @Component({
   selector: 'ca-article',
@@ -12,6 +13,7 @@ export class ArticleComponent implements OnInit {
   screenSize : string = "large";
   id: number;
   online = online;
+  article: Article | undefined;
 
   constructor(private activatedRoute: ActivatedRoute) {
     this.chooseScreenSize();
@@ -19,6 +21,7 @@ export class ArticleComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.article = articles.find(article => this.id === article.id);
   }
 
   @HostListener('window:resize', ['$event'])

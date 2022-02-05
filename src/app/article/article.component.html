@@ -1,0 +1,55 @@
+<div>
+  <span *ngIf="article">
+
+    <img *ngIf="article.img_article_header" width="100%" alt="Bannière de l'article"
+    class="resize_fit_center mb-2"
+    [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+    article.img_article_header"/>
+
+    <!-- Title -->
+    <article>    
+      <h1 class="flex justify-content-center mb-0 title center">{{article.title}}</h1>
+      <h3 class="flex justify-content-center mt-0 mb-0 font-italic">{{article.subTitle}}</h3>
+      <div class="flex justify-content-center mt-0" [ngClass]="screenSize != 'small' ? 'mb-7' : ''">
+        <div class="mt-2 ml-2 mr-2" *ngFor="let type of article.types" >
+          <p-chip [label]="type"></p-chip>
+        </div>
+      </div>
+    </article>
+
+    <!-- Content -->
+    <article *ngIf="screenSize !== 'small'">
+      <article>
+        <img width="50%" alt="Bannière de l'article" 
+        class="image1 mr-3 mb-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+         article.img_article_1"/>
+        <span *ngFor="let text of article.content">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{text}}
+          <br><br>
+        </span>
+      </article>
+    </article>
+    <article *ngIf="screenSize === 'small'">
+        <img width="100%" alt="Bannière de l'article" 
+        class="m-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+         article.img_article_1"/>
+        <span *ngFor="let text of article.content">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{text}}
+          <br><br>
+        </span>
+    </article>
+
+     <!-- Biblio -->
+  <article class="mb-5 mt-3" *ngIf="article.bibliography">
+    <p-accordion>
+      <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
+        <span *ngFor="let text of article.bibliography">
+          {{text}}
+          <br><br>
+        </span>
+      </p-accordionTab>
+    </p-accordion>
+  </article>
+
+  </span>
+</div>
