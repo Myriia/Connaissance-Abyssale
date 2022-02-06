@@ -13,7 +13,6 @@ import { ChipModule } from "primeng/chip";
 import {MenubarModule} from 'primeng/menubar';
 import {DataViewModule} from 'primeng/dataview';
 
-
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CuriositiesComponent } from './pages/curiosities/curiosities.component';
@@ -29,13 +28,10 @@ import {FormsModule} from "@angular/forms";
 import {BiomimetismeComponent} from "./pages/biomimetisme/biomimetisme.component";
 import {ProtectionEtConservationComponent} from "./pages/protection-et-conservation/protection-et-conservation.component";
 import {TitleComponent} from "./title/title.component";
-import {Article0001Component} from "./articles/article-0001/article-0001.component";
-import {ArticleComponent} from "./articles/article/article.component";
+import {ArticleComponent} from "./article/article.component";
 import {FieldsetModule} from "primeng/fieldset";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ChartModule} from "primeng/chart";
-import {Article0003Component} from "./articles/article-0003/article-0003.component";
-import {Article0002Component} from "./articles/article-0002/article-0002.component";
 import {AccordionModule} from "primeng/accordion";
 
 const routes: Routes = [
@@ -66,9 +62,6 @@ const routes: Routes = [
     BiomimetismeComponent,
     ProtectionEtConservationComponent,
     TitleComponent,
-    Article0001Component,
-    Article0002Component,
-    Article0003Component,
     ArticleComponent
   ],
   imports: [
