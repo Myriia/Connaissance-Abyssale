@@ -8,11 +8,14 @@ h1 {
   font-size: 4em;
   margin: 0;
 }
+h3 {
+  font-size: 2em;
+}
 body {
   background-color: #F9F9F9;
 }
 p {
-  font-family: 'IBM Plex Serif', serif;
+  font-size: 18px;
 }
 article{
   width: 60%;
