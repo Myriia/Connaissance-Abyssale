@@ -23,30 +23,30 @@
         <img width="50%" alt="Bannière de l'article" 
         class="image1 mr-3 mb-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
-        <span *ngFor="let text of article.content">
+        <p *ngFor="let text of article.content">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{text}}
           <br><br>
-        </span>
+        </p>
       </article>
     </article>
     <article *ngIf="screenSize === 'small'">
         <img width="100%" alt="Bannière de l'article" 
         class="m-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
-        <span *ngFor="let text of article.content">
+        <p *ngFor="let text of article.content">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{text}}
           <br><br>
-        </span>
+        </p>
     </article>
 
      <!-- Biblio -->
   <article class="mb-5 mt-3" *ngIf="article.bibliography">
     <p-accordion>
       <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
-        <span *ngFor="let text of article.bibliography">
+        <p *ngFor="let text of article.bibliography">
           {{text}}
           <br><br>
-        </span>
+        </p>
       </p-accordionTab>
     </p-accordion>
   </article>
