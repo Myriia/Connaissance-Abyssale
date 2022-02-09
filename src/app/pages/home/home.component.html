@@ -1,22 +1,18 @@
-<img alt="image d'accueil" width="100%" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
 <div [ngSwitch]="screenSize">
   <div *ngSwitchCase="'small'" class="ml-4 mr-4">
+    <img alt="image d'accueil" width="100%" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
     <div [ngSwitch]="screenSize" class="mt-2 mb-4">
         <div class="mb-2" *ngFor="let article of articles">
           <ca-article-presentation [screenSize]="screenSize" [article]="article"></ca-article-presentation>
         </div>
     </div>
   </div>
-  <article *ngSwitchDefault>
+  <div *ngSwitchDefault>
+    <img alt="image d'accueil" width="100%" [src]="(online ? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + imageHome" />
     <div [ngSwitch]="screenSize" class="mt-2 mb-4">
-      <div *ngSwitchCase="'large'" class="flex">
+      <div class="flex">
         <ca-article-presentation *ngFor="let article of articles" class="article-presentation" [article]="article"></ca-article-presentation>
       </div>
-      <div *ngSwitchCase="'medium'">
-        <div class="mb-2" *ngFor="let article of articles">
-          <ca-article-presentation [screenSize]="screenSize" [article]="article"></ca-article-presentation>
-        </div>
-      </div>
     </div>
-  </article>
+    </div>
 </div>
