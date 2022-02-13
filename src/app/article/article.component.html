@@ -12,7 +12,7 @@
       <h3 class="flex justify-content-center mt-0 mb-0 font-italic">{{article.subTitle}}</h3>
       <div class="flex justify-content-center mt-0" [ngClass]="screenSize != 'small' ? 'mb-7' : ''">
         <div class="mt-2 ml-2 mr-2" *ngFor="let type of article.types" >
-          <p-chip [label]="type"></p-chip>
+          <a class="link-chip" [routerLink]="[getRouterLink(type)]"><p-chip [label]="type"></p-chip></a>
         </div>
       </div>
     </article>
@@ -24,8 +24,8 @@
         class="image1 mr-3 mb-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
         <p *ngFor="let text of article.content">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{text}}
-          <br><br>
+          <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
+          <br>
         </p>
       </article>
     </article>
@@ -34,8 +34,8 @@
         class="m-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
         <p *ngFor="let text of article.content">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{text}}
-          <br><br>
+          <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
+          <br>
         </p>
     </article>
 
@@ -44,8 +44,8 @@
     <p-accordion>
       <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
         <p *ngFor="let text of article.bibliography">
-          {{text}}
-          <br><br>
+          <span [innerHTML]="text"> </span>
+          <br>
         </p>
       </p-accordionTab>
     </p-accordion>
