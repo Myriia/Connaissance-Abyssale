@@ -108,6 +108,24 @@ const articles: Article[] = [
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_alenvers.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
+    id : 6,
+    title : 'La méduse immortelle,',
+    subTitle : 'Turritopsis dohrnii',
+    content : [
+      '</i>Turritopsis dohrnii</i> a une ombrelle qui fait  moins d’un centimètre de haut en forme de dés à coudre et qui est bordée de nombreux tentacules très fin. Cette méduse est le premier organisme connu capable d’immortalité. Chez la plus part des organismes vivant, le vieillissement est unidirectionnel : les cellules sont programmées pour aller de la jeunesse à la vieillesse. L’immortalité de cette méduse est due à sa capacité à faire rajeunir ses cellules.', 
+      'Les méduses possèdent plusieurs stades de vies. Quand elles sont jeunes elles vivent fixées et ne sont pas capables de se reproduire. Il s’agit de la phase polype. En grandissant elles atteignent le stade méduse, libre dans la colonne d’eau et capable de se reproduire. Quand une méduse Turritopsis meurt au lieu de se désintégrer comme la majorité des êtres vivants, ces cellules se réagrègent par un processus appelé transdifférenciation et reforme un polype. Et c’est le début d’un nouveau cycle de vie. Pour le dire avec d’autres mots, c’est un peu comme si une grenouille à l’agonie voyait ses cellules se ré-agréger pour former un têtard.',
+      'Il se trouve que le stress est un stimulant essentiel pour déclencher ce cycle, aucune méduse non stressée n’a été observée en train de se transdifférencier. De plus, des expériences ont montré que ce cycle nécessite une température d’au moins 22°C, et que si on refroidit l’eau, le cycle s’interrompt pour reprendre en cas de réchauffement. Cette capacité de résurrection semble être sans limite puisque des chercheurs ont obtenu au moins 10 répétitions de ce cycle en 2 ans chez un même organisme. Ce qui est d’autant plus incroyable c’est que la transdifférenciation est capable de démarrer à tous les stades de croissance de la méduse. Pas besoin d’être jeune ou adulte pour pouvoir ressusciter.',
+      ' Originaire de méditerranée, Turritopsis dohrnii  a attiré l’attention de nombreux chercheurs car les mécanismes cellulaires lui permettant de rajeunir pourraient faire avancer la recherche contre le cancer.Pour plus aller plus loin sur les processus biologiques cellulaires derrière la transdifférenciation, je vous invite à jeter un œil aux sources bibliographiques citées en bas de cette page.',
+      'Statut UICN (liste rouge des espèces menacées) : NE : Non évalué..'],
+    bibliography: [
+      '« Immortal » Jellyfish Swarm World’s Oceans, 2009. Animals [en ligne]. [Consulté le 16 février 2022]. Disponible à l’adresse : https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals',
+      'LISA-ANN GERSHWIN, 2017. Méduses et autres organismes gélatineux. Ulmer. 24 rue de Mogador 75009 Paris.',
+      'MATSUMOTO, Yui, PIRAINO, Stefano et MIGLIETTA, Maria Pia, 2019. Transcriptome Characterization of Reverse Development in Turritopsis dohrnii (Hydrozoa, Cnidaria). G3: Genes|Genomes|Genetics [en ligne]. 16 octobre 2019. Vol. 9, n° 12, pp. 4127‑4138. [Consulté le 16 février 2022]. DOI 10.1534/g3.119.400487. Disponible à l’adresse : https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6893190/',
+      ],
+    img_article_header : 'bandeau méduses.png',
+    img_article_1 : 'Immortelle.png',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
 ];
 
