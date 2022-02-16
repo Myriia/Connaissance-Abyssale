@@ -59,7 +59,7 @@ const articles: Article[] = [
     bibliography: [
     ],
     img_article_1 : 'museau_court.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 3,
     title : 'Hippocampe moucheté',
@@ -73,7 +73,7 @@ const articles: Article[] = [
     bibliography: [
     ],
     img_article_1 : 'Hipp_mouchete.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 4,
     title : 'Pelagie, acalèphe brillante,',
@@ -81,7 +81,7 @@ const articles: Article[] = [
     content : [
       'L’acalèphe brillante tire son nom de sa capacité à émettre sa propre lumière, on dit qu’elle est bioluminescente. Son ombrelle en forme de champignon mesure entre 7 et 17 cm, les quatre gros tentacules entre 10 et 15 cm et les plus fin peuvent mesurer jusqu’à un demi-mètre. Les verrues mauves que l’on retrouve sur cet organisme contiennent des cellules urticantes, les cnidocytes.',
       'Cet organisme se nourrit de crustacés, d’autres méduses et des fois de petits poissons qu’elle capture à l’aide de ses cnidocytes. Un film de mucus ramène les proies sous l’ombrelle où se trouve la cavité gastrique et où se passera la digestion',
-      'Cette espèce est celle que les baigneurs rencontrent le plus souvent en mer Méditerranée. Cependant Pelagia noctiluca est cosmopolite, on la retrouve un peu partout dans les mers et océans du globe. Elle nage le plus souvent près de la surface dans les premiers mètres de la colonne d’eau et affectionne les zones chaudes et tempérées.'
+      'Cette espèce est celle que les baigneurs rencontrent le plus souvent en mer Méditerranée. Cependant <i>Pelagia noctiluca<i> est cosmopolite, on la retrouve un peu partout dans les mers et océans du globe. Elle nage le plus souvent près de la surface dans les premiers mètres de la colonne d’eau et affectionne les zones chaudes et tempérées.'
     ],
     bibliography: [
       'ZIEMSKI Frédéric, GOY Jacqueline, SITTLER Alain-Pierre in : DORIS, 07/11/2020 : Pelagia noctiluca (Forsskål, 1775), https://doris.ffessm.fr/ref/specie/87',
@@ -99,7 +99,7 @@ const articles: Article[] = [
     content : [
       'Cette espèce de méduse a la capacité de nager mais elle est la plus part du temps le dos posé sur le sédiment. En effet, cet organisme a la particularité de vivre à l’envers : ombrelle sur le fond et les tentacules dirigés vers la surface.',
       'La raison à cette drôle de posture vient du fait que la majorité des besoins alimentaires de la méduse sont comblés par des micro-algues présentent sur les tentacules. C’est pourquoi les tentacules sont déployés à l’horizontal pour maximiser l’exposition au soleil et ainsi la production d’énergie de la part des micro-algues.',
-      'On retrouve Cassiopea andromeda  principalement de l’ouest de l’océan Indien à l’ouest de l’océan Pacifique. Elle vit dans les eaux calmes et relativement chaudes. Elle nage majoritairement dans les dix premiers mètres de la colonne d’eau, zone où la luminosité est la plus forte.',
+      'On retrouve <i>Cassiopea andromeda<i>  principalement de l’ouest de l’océan Indien à l’ouest de l’océan Pacifique. Elle vit dans les eaux calmes et relativement chaudes. Elle nage majoritairement dans les dix premiers mètres de la colonne d’eau, zone où la luminosité est la plus forte.',
       'Statut UICN (liste rouge des espèces menacées) : LC : peu concernée.'],
     bibliography: [
       'Cassiopea andromeda | DORIS, [sans date]. [en ligne]. [Consulté le 1 février 2022]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Cassiopea-andromeda-Meduse-a-l-envers-indo-pacifique-2417',
