@@ -7,7 +7,7 @@
     <p-divider class="p-m-0"></p-divider>
     <p-chip *ngFor="let type of article.types" [label]="type"></p-chip>
     <div class="content-large">
-      <p>{{article.content}}</p>
+      <p [innerHTML]="article.content"></p>
     </div>
     <p class="read-more">lire plus</p>
   </p-card>
@@ -22,7 +22,7 @@
         <span class="content-default">
           <h2 class="m-0">{{article.title}}</h2>
           <p-chip class="mt-1" *ngFor="let type of article.types" [label]="type"></p-chip>
-          <span class="m-0">{{article.content}}</span>
+          <span class="m-0" [innerHTML]="article.content"></span>
         </span>
         <p class="read-more">lire plus</p>
       </div>

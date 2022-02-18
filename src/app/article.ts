@@ -33,48 +33,6 @@ const articles: Article[] = [
     img_article_presentation : NO_IMAGE,
     types : [TYPE_ARTICLE.NO],
   },{
-    id : 1,
-    title : 'Grande nacre',
-    subTitle : '(Pinna nobilis)',
-    content : [
-      'La grande nacre peut mesurer jusqu’à 1m20 une fois adulte. Elle est implantée dans le sédiment et inclinée vers le courant pour optimiser la filtration de l’eau qui approche les 6.5 litres par jour. Ce système lui permet  de se nourrir de particules vivantes (plancton) ou mortes (matière organique en suspension).',
-      'Sur le site où nous allons plonger, elle est présente au niveau des 3 graus (passages qui permettent une communication entre les eaux maritimes et les eaux intérieures).',
-      'Il s’agit d’une espèce endémique du bassin  méditerranéen. Comme le mérou, la surpêche a failli causer son extinction, c’est pourquoi elle est protégée depuis 1992.  Aujourd’hui elle est grandement menacée (Statut IUCN : Danger critique d’extinction) par un parasite qui a provoqué une épidémie massive en 2016.'
-    ],
-    bibliography: [
-    ],
-    img_article_header : 'grande_nacre_1.jpg',
-    img_article_1 : 'nacre.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },{
-    id : 2,
-    title : 'Hippocampe à museau court',
-    subTitle : '(Hippocampus hippocampus)',
-    content : [
-      'Les hippocampes à museau court ont une taille qui varie entre 11 et 15 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est entre 2 et 2.5 fois plus long que haut. La crête triangulaire présente sur leur tête permet d’idenpngier cette espèce. Ils possèdent aussi des courtes cornes au-dessus des yeux. Leur couleur est variable, ils sont capables de mimer la couleur de leur environnement pour se camoufler.',
-      'On reconnait les mâles par la présence d’une poche incubatrice, flasque ou rebondie selon la phase de reproduction, alors que la femelle garde la taille fine tout au long de l’année. La reproduction a lieu fin printemps/début été avec la formation de couples. Les mâles vont stoker les œufs fécondés dans leur poche incubatrice jusqu’à l’éclosion des larves. Une fois ce stade atteint, les jeunes poissons sont expulsés par de puissantes contractions abdominales. Les hippocampes sont une exception dans le règne animal car il s’agit des seules espèces connues où les mâles réalisent l’accouchement. On peut observer les petits hippocampes vers le mois d’août, ils ne mesurent alors que quelques centimètres. Ces jeunes de moins de 5cm sont présents jusqu’à la fin de l’hiver. Ils mesureront environ 10cm à l’été suivant et pourront dès lors se reproduire. Ils ont une espérance de vie de 4 à 5 ans.',
-      'Les hippocampes à museau court se nourrissent de zooplancton, de petits crustacés, de larves nauplius, d’œufs de poisson et de petits crustacés benthiques se déplaçant sur le fond. Pour se nourrir les hippocampes aspirent leurs proies à l’aide de leur bouche en forme de pipette.',
-      'Cette espèce d’hippocampe vie entre 0 et 10m sur un fond sableux que ça soit en mer ou dans les lagunes.'
-    ],
-    bibliography: [
-    ],
-    img_article_1 : 'museau_court.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },{
-    id : 3,
-    title : 'Hippocampe moucheté',
-    subTitle : '(Hippocampus guttulatus)',
-    content : [
-      'Les hippocampes mouchetés ont une taille qui varie entre 12 et 16 cm chez l’adulte. Leur nom vient de la forme de leur museau qui est plus de trois fois plus long que haut et bien plus fin que celui de l’espèce précédente. Ces hippocampes possèdent des longs filaments cutanés sur la tête et sur le dos ce qui est un critère de reconnaissance avec la forme du museau. Mais attention, ce n’est pas parce qu’il n’y a pas de filaments que ce n’est pas un hippocampe moucheté ! La coloration de cette espèce varie du brun foncé au jaune, avec une présence de taches blanches sur le corps.',
-      'Comme pour toutes les espèces d’hippocampes, c’est le mâle qui couve les œufs. La période de frai s’étend de fin mai à fin juillet. Comme précédemment, la maturité sexuelle est atteinte au bout de 6 à 8 mois et l’espérance de vie des adultes s’éteint jusqu’à 5 ans. La fonction préhensile de la queue joue un rôle très important dans l\'accouplement qui comprend une phase d’enlacement. Ce comportement empêche tout croisement avec l\'espèce Hippocampus hippocampus qui ne le pratique pas.',
-      'Les hippocampes mouchetés vivent dans les prairies de posidonies et de zostères ou parmi les algues à partir de 5m de profondeur.',
-      'Vous l’aurez compris, nous allons plonger dans un site abritant une biodiversité exceptionnelle mais aussi fragile, c’est pourquoi on vous demandera bien évidement d’en prendre le plus grand soin.'
-    ],
-    bibliography: [
-    ],
-    img_article_1 : 'Hipp_mouchete.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
-  },{
     id : 4,
     title : 'Pelagie, acalèphe brillante,',
     subTitle : 'Pelagia noctiluca',
