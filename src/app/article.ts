@@ -42,9 +42,9 @@ const articles: Article[] = [
       'Cette espèce est celle que les baigneurs rencontrent le plus souvent en mer Méditerranée. Cependant <i>Pelagia noctiluca</i> est cosmopolite, on la retrouve un peu partout dans les mers et océans du globe. Elle nage le plus souvent près de la surface dans les premiers mètres de la colonne d’eau et affectionne les zones chaudes et tempérées.',
       'Statut UICN (liste rouge des espèces menacées) : NE : Non évalué..'],
     bibliography: [
-      'ZIEMSKI Frédéric, GOY Jacqueline, SITTLER Alain-Pierre in : DORIS, 07/11/2020 : Pelagia noctiluca (Forsskål, 1775), https://doris.ffessm.fr/ref/specie/87',
-      'Microplastic ingestion in jellyfish Pelagia noctiluca (Forsskal, 1775) in the North Atlantic Ocean, 2021. Marine Pollution Bulletin [en ligne]. Vol. 166, pp. 112266. [Consulté le 1 février 2022]. DOI 10.1016/j.marpolbul.2021.112266. Disponible à l’adresse : https://www-sciencedirect-coms.docadis.univ-tlse3.fr/science/article/pii/S0025326X21003003',
-      'Pelagia noctiluca | DORIS, [sans date]. [en ligne]. [Consulté le 1 février 2022]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Pelagia-noctiluca-Pelagie-87',
+      'ZIEMSKI Frédéric, GOY Jacqueline, SITTLER Alain-Pierre in : DORIS, 07/11/2020 : Pelagia noctiluca (Forsskål, 1775), <a href="https://doris.ffessm.fr/ref/specie/87">https://doris.ffessm.fr/ref/specie/87</a>',
+      'Microplastic ingestion in jellyfish Pelagia noctiluca (Forsskal, 1775) in the North Atlantic Ocean, 2021. Marine Pollution Bulletin [en ligne]. Vol. 166, pp. 112266. [Consulté le 1 février 2022]. DOI 10.1016/j.marpolbul.2021.112266. Disponible à l’adresse : <a href="https://www-sciencedirect-coms.docadis.univ-tlse3.fr/science/article/pii/S0025326X21003003">https://www-sciencedirect-coms.docadis.univ-tlse3.fr/science/article/pii/S0025326X21003003</a>',
+      'Pelagia noctiluca | DORIS, [sans date]. [en ligne]. [Consulté le 1 février 2022]. Disponible à l’adresse : <a href="https://doris.ffessm.fr/Especes/Pelagia-noctiluca-Pelagie-87">https://doris.ffessm.fr/Especes/Pelagia-noctiluca-Pelagie-87</a>',
       'STEVEN, WEINBERG, 2015. Découvrir la vie sous-marine Méditerranée. 2 rue du Marais - ZAC du Puits d’Ordet 73190 CHALLES-LES-EAUX FRance : GAP. ISBN 978-2-7417-0533-8.'
     ],
     img_article_header : 'bandeau méduses.png',
@@ -60,7 +60,7 @@ const articles: Article[] = [
       'On retrouve <i>Cassiopea andromeda</i>  principalement de l’ouest de l’océan Indien à l’ouest de l’océan Pacifique. Elle vit dans les eaux calmes et relativement chaudes. Elle nage majoritairement dans les dix premiers mètres de la colonne d’eau, zone où la luminosité est la plus forte.',
       'Statut UICN (liste rouge des espèces menacées) : LC : peu concernée.'],
     bibliography: [
-      'Cassiopea andromeda | DORIS, [sans date]. [en ligne]. [Consulté le 1 février 2022]. Disponible à l’adresse : https://doris.ffessm.fr/Especes/Cassiopea-andromeda-Meduse-a-l-envers-indo-pacifique-2417',
+      'Cassiopea andromeda | DORIS, [sans date]. [en ligne]. [Consulté le 1 février 2022]. Disponible à l’adresse : <a href="https://doris.ffessm.fr/Especes/Cassiopea-andromeda-Meduse-a-l-envers-indo-pacifique-2417">https://doris.ffessm.fr/Especes/Cassiopea-andromeda-Meduse-a-l-envers-indo-pacifique-2417</a>',
       'LISA-ANN GERSHWIN, 2017. Méduses et autres organismes gélatineux. Ulmer. 24 rue de Mogador 75009 Paris.'
       ],
     img_article_header : 'bandeau méduses.png',
@@ -77,9 +77,9 @@ const articles: Article[] = [
       ' Originaire de méditerranée, <i>Turritopsis dohrnii</i>  a attiré l’attention de nombreux chercheurs car les mécanismes cellulaires lui permettant de rajeunir pourraient faire avancer la recherche contre le cancer. Pour plus aller plus loin sur les processus biologiques cellulaires derrière la transdifférenciation, je vous invite à jeter un œil aux sources bibliographiques citées en bas de cette page.',
       'Statut UICN (liste rouge des espèces menacées) : NE : Non évalué..'],
     bibliography: [
-      '« Immortal » Jellyfish Swarm World’s Oceans, 2009. Animals [en ligne]. [Consulté le 16 février 2022]. Disponible à l’adresse : https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals',
+      '« Immortal » Jellyfish Swarm World’s Oceans, 2009. Animals [en ligne]. [Consulté le 16 février 2022]. Disponible à l’adresse : <a href="https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals">https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals</a>',
       'LISA-ANN GERSHWIN, 2017. Méduses et autres organismes gélatineux. Ulmer. 24 rue de Mogador 75009 Paris.',
-      'MATSUMOTO, Yui, PIRAINO, Stefano et MIGLIETTA, Maria Pia, 2019. Transcriptome Characterization of Reverse Development in Turritopsis dohrnii (Hydrozoa, Cnidaria). G3: Genes|Genomes|Genetics [en ligne]. 16 octobre 2019. Vol. 9, n° 12, pp. 4127‑4138. [Consulté le 16 février 2022]. DOI 10.1534/g3.119.400487. Disponible à l’adresse : https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6893190/',
+      'MATSUMOTO, Yui, PIRAINO, Stefano et MIGLIETTA, Maria Pia, 2019. Transcriptome Characterization of Reverse Development in Turritopsis dohrnii (Hydrozoa, Cnidaria). G3: Genes|Genomes|Genetics [en ligne]. 16 octobre 2019. Vol. 9, n° 12, pp. 4127‑4138. [Consulté le 16 février 2022]. DOI 10.1534/g3.119.400487. Disponible à l’adresse : <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6893190/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6893190/</a>',
       ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'Immortelle.png',

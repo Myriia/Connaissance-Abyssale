@@ -9,3 +9,7 @@
 :host>>>.p-dataview .p-dataview-content{
   background-color: #F9F9F9;
 }
+
+:host>>> .p-paginator .p-paginator-pages .p-paginator-page{
+  min-width: 0;
+}

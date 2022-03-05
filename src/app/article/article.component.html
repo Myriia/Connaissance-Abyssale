@@ -7,15 +7,15 @@
     article.img_article_header"/>
 
     <!-- Title -->
-    <article>    
+    <div>    
       <h1 class="flex justify-content-center mb-0 title center">{{article.title}}</h1>
       <h3 class="flex justify-content-center mt-0 mb-0 font-italic">{{article.subTitle}}</h3>
       <div class="flex justify-content-center mt-0" [ngClass]="screenSize != 'small' ? 'mb-7' : ''">
-        <div class="mt-2 ml-2 mr-2" *ngFor="let type of article.types" >
+        <div class="mt-2" *ngFor="let type of article.types" >
           <a class="link-chip" [routerLink]="[getRouterLink(type)]"><p-chip [label]="type"></p-chip></a>
         </div>
       </div>
-    </article>
+    </div>
 
     <!-- Content -->
     <article *ngIf="screenSize !== 'small'">
@@ -29,18 +29,28 @@
         </p>
       </article>
     </article>
-    <article *ngIf="screenSize === 'small'">
+    <div class="ml-2 mr-2" *ngIf="screenSize === 'small'">
         <img width="100%" alt="Bannière de l'article" 
-        class="m-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+        class="mt-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
         <p *ngFor="let text of article.content">
           <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
           <br>
         </p>
-    </article>
+      </div>
 
      <!-- Biblio -->
-  <article class="mb-5 mt-3" *ngIf="article.bibliography">
+  <div class="mb-5 mt-3" *ngIf="article.bibliography && screenSize === 'small'">
+    <p-accordion>
+      <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
+        <p *ngFor="let text of article.bibliography">
+          <span [innerHTML]="text"> </span>
+          <br>
+        </p>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <article class="mb-5 mt-3" *ngIf="article.bibliography && screenSize !== 'small'">
     <p-accordion>
       <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
         <p *ngFor="let text of article.bibliography">

@@ -33,6 +33,7 @@ import {FieldsetModule} from "primeng/fieldset";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ChartModule} from "primeng/chart";
 import {AccordionModule} from "primeng/accordion";
+import {SidebarModule} from 'primeng/sidebar';
 
 const routes: Routes = [
   {path: 'article/:id', component: ArticleComponent},
@@ -80,7 +81,8 @@ const routes: Routes = [
     FormsModule,
     FieldsetModule,
     BrowserAnimationsModule,
-    ChartModule
+    ChartModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

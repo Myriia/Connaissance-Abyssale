@@ -13,3 +13,6 @@
 .center{
   text-align: center;
 }
+:host>>> .p-accordion-tab span{
+  word-wrap: break-word;
+}
