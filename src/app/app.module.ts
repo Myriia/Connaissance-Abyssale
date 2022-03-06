@@ -34,6 +34,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ChartModule} from "primeng/chart";
 import {AccordionModule} from "primeng/accordion";
 import {SidebarModule} from 'primeng/sidebar';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {path: 'article/:id', component: ArticleComponent},
@@ -63,7 +64,8 @@ const routes: Routes = [
     BiomimetismeComponent,
     ProtectionEtConservationComponent,
     TitleComponent,
-    ArticleComponent
+    ArticleComponent,
+    AboutComponent
   ],
   imports: [
     AccordionModule,
@@ -82,7 +84,8 @@ const routes: Routes = [
     FieldsetModule,
     BrowserAnimationsModule,
     ChartModule,
-    SidebarModule
+    SidebarModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

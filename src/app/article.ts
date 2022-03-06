@@ -23,6 +23,25 @@ interface Article{
   types:TYPE_ARTICLE[];
 }
 
+interface APropos{
+  title:string;
+  content:string[];
+}
+
+const a_propos: APropos = {
+  title: "Bienvenue sur Connaissance Abyssale !",
+  content : [
+    "Je m’appelle Camille et je suis actuellement étudiante entre la première et la deuxième année du master Man And Biosphere (MAB) à l’université Paul Sabatier de Toulouse. Cette année de parenthèse dans mes études va me permettre d’approfondir mes connaissances sur le monde marin. Ce milieu étant généralement mal connu, j’ai décidé de vous le présenter à travers différents articles illustrés pour éveiller votre curiosité. J’espère pouvoir vous transmettre à travers les différentes rubriques de ce site, ma passion pour le monde marin !",
+    "Les différentes rubriques sont les suivantes :",
+    "« Protection et Conservation » : Aujourd’hui l’ensemble des écosystèmes sont menacés et le monde marin n’échappe pas à cette généralité. Dans cette rubrique je vais vous présenter à travers des exemples concrets, ce que l’être humain a mis en place pour tenter de protéger et sauver la biodiversité marine.",
+    "« Les Curiosités » : Les animaux marins ont des adaptations qui leur sont propre et cela donne des formes et des couleurs extraordinaires. Je vais ici vous présenter des organismes qui me fascinent.",
+    "« Biomimétisme » : La nature est une source d’inspiration pour l’être humain depuis des milliers d’années. Le monde marin ne fait pas exception. Je vais vous présenter des inventions pour lesquelles l’humain s’est inspiré du fonctionnement des organismes marins.",
+    "« Si j’étais » : Dans cette rubrique je vais vous sensibiliser à la cause des organismes marins. On se sent plus facilement concernés pour la protection d’un mammifère terrestre (au hasard : lion, tigre, panda, ours polaire) que celle d’un animal marin. Pour accroitre voter sensibilité au monde marin je vais vous expliquer comment serait votre vie si vous étiez l’un d’entre eux.",
+    "« Arbre Phylogénétique » : L’arbre phyllogénétique est un outil qui permet de visualiser la façon dont les organismes vivants sont classés. Je vais ici vous présenter les grands groupes d’animaux marins et leur classification.",
+    "« Glossaire » : Dictionnaire où vous retrouverai expliquer certains mots techniques utilisés dans les articles."
+  ]
+};
+
 const articles: Article[] = [
   {
     id : 0,
@@ -90,4 +109,4 @@ const articles: Article[] = [
 const title = 'Connaissance Abyssale';
 const image_home_page = 'bandeau_site_internet.jpg';
 
-export {title, NO_IMAGE, Article, articles, image_home_page, TYPE_ARTICLE} ;
+export {title, NO_IMAGE, Article, APropos, articles, image_home_page, TYPE_ARTICLE, a_propos} ;
