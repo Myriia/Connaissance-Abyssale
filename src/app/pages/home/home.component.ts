@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
         let article = params.article;
         let tab = params.tab;
         if (article) {
-          this.router.navigate(['pop/' + article]);
+          this.router.navigate([article]);
         }
         else if (tab) {
           this.router.navigate([tab]);
