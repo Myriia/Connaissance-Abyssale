@@ -1,6 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {Meta, Title} from "@angular/platform-browser";
-import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
