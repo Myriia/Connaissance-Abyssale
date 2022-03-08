@@ -21,13 +21,9 @@ export class HomeComponent implements OnInit {
     this.articles = articles.filter(article => article.types?.includes(this.type));
     this.chooseScreenSize();
       this.route.queryParams.subscribe(params => {
-        let article = params.article;
-        let tab = params.tab;
-        if (article) {
-          this.router.navigate(['pop/' + article]);
-        }
-        else if (tab) {
-          this.router.navigate([tab]);
+        let redirection = params.redirection;
+        if(redirection){
+          this.router.navigate([redirection]);
         }
       });
   }
