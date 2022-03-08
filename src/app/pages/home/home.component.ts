@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import {Article, articles, image_home_page, TYPE_ARTICLE} from "../../article";
 import {online} from "../../config";
 
@@ -14,11 +15,21 @@ export class HomeComponent implements OnInit {
   imageHome=image_home_page;
   online=online;
   screenSize: string = "large";
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.articles = articles.filter(article => article.types?.includes(this.type));
     this.chooseScreenSize();
+      this.route.queryParams.subscribe(params => {
+        let article = params.article;
+        let tab = params.tab;
+        if (article) {
+          this.router.navigate(['article/' + article]);
+        }
+        else if (tab) {
+          this.router.navigate([tab]);
+        }
+      });
   }
 
   @HostListener('window:resize', ['$event'])

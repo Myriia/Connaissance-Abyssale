@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
 
   items: MenuItem[] = [
     {
-      label: 'Accueil', routerLink: 'home'
+      label: 'Accueil', routerLink: ''
     },
     {
       label: 'Protection et Conservation', routerLink: 'protectionEtConservation'

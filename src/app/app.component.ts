@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
     tab: string | undefined = undefined;
     screenSize: string = "large";
 
-    constructor(private titleService: Title, private route: ActivatedRoute, private router: Router, private meta: Meta) {
+    constructor(private titleService: Title, private meta: Meta) {
       this.meta.addTags([
         {name: 'description', content: 'TODO'},
         {name: 'author', content: 'TODO'},
@@ -24,21 +24,6 @@ export class AppComponent implements OnInit{
 
     ngOnInit(): void {
       this.chooseScreenSize();
-
-      this.route.queryParams.subscribe(params => {
-      this.article = params.article;
-      this.tab = params.tab;
-      if (this.article) {
-        this.router.navigate([
-          'article/' + this.article + '/'
-        ]);
-      }
-      else if (this.tab) {
-        this.router.navigate([
-          'tab/' + this.article + '/'
-        ]);
-      }
-    });
   }
 
   @HostListener('window:resize', ['$event'])
