@@ -43,10 +43,9 @@ const routes: Routes = [
   {path: 'curiosities', component: CuriositiesComponent},
   {path: 'phylogeneticTree', component: PhylogeneticTreeComponent},
   {path: 'whatIf', component: WhatIfComponent},
-  {path: 'home', component: HomeComponent},
   {path: 'biomimetisme', component:BiomimetismeComponent},
   {path: 'protectionEtConservation', component:ProtectionEtConservationComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', component: HomeComponent }
 ]
 
 @NgModule({
