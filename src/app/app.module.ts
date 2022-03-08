@@ -37,7 +37,6 @@ import {SidebarModule} from 'primeng/sidebar';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  {path: 'pop/:id', component: ArticleComponent},
   {path: 'glossaire', component: GlossaireComponent},
   {path: 'about', component: AboutComponent},
   {path: 'curiosities', component: CuriositiesComponent},
@@ -45,6 +44,7 @@ const routes: Routes = [
   {path: 'whatIf', component: WhatIfComponent},
   {path: 'biomimetisme', component:BiomimetismeComponent},
   {path: 'protectionEtConservation', component:ProtectionEtConservationComponent},
+  {path: ':id', component: ArticleComponent},
   { path: '', component: HomeComponent }
 ]
 
