@@ -26,22 +26,19 @@ export class AppComponent implements OnInit{
       this.chooseScreenSize();
 
       this.route.queryParams.subscribe(params => {
-        console.log(params)
-        this.article = params.article;
-        console.log(this.article)
-        this.tab = params.tab;
-        console.log(this.tab)
-        if (this.article) {
-          this.router.navigate([
-            'article/' + this.article
-          ]);
-        }
-        else if (this.tab) {
-          this.router.navigate([
-            this.tab
-          ]);
-        }
-      });
+      this.article = params.article;
+      this.tab = params.tab;
+      if (this.article) {
+        this.router.navigate([
+          'article/' + this.article + '/'
+        ]);
+      }
+      else if (this.tab) {
+        this.router.navigate([
+          'tab/' + this.article + '/'
+        ]);
+      }
+    });
   }
 
   @HostListener('window:resize', ['$event'])
