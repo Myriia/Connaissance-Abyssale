@@ -84,7 +84,7 @@ const articles: Article[] = [
       ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_alenvers.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 6,
     title : 'La méduse immortelle,',
@@ -103,9 +103,26 @@ const articles: Article[] = [
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'Immortelle.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
+ id : 7,
+    title : 'La méduse œuf au plat,',
+    subTitle : 'Cotylorhiza tuberculata',
+    content : [
+      'Cette méduse tire son nom de la forme de son ombrelle. Elle est de couleur blanchâtre sauf au centre où elle est bombée et jaune orangé. Celle-ci peut mesurer jusqu’à 40cm de circonférence.',
+      'Sous cette ombrelle, il y a de nombreux tentacules terminés par de petits disques violets. Cette couleur est due à la présence d’algues unicellulaires dans les tissus de la méduse. Ces algues s’appellent des zooxanthelles. <i>Cotylorhiza tuberculata</i> vit en symbiose avec des algues dans ses tentacules, tout comme la méduse à l’envers <i>Cassiopea andromeda</i>.',
+      'La symbiose c’est lorsque deux organismes ont une interaction bénéfique pour eux deux. Ce qui rend cette interaction tout particulière, c’est que les organismes impliqués sont incapables de vivre l’un sans l’autre. Ici il s’agit d’une endosymbiose car l’algue est située dans les tissus de la méduse. Dans cette interaction : l’algue va fournir à la méduse de la nourriture, et la méduse va fournir un abri à l’algue. <i>Cotylorhiza tuberculata</i> se nourrit de plancton de petite taille pour compléter les apports énergétiques apportés par les zooxanthelles.',
+      'La méduse œuf au plat est endémique de Méditerranée. Cela signifie qu’on ne la retrouve qu’à cet endroit de la planète. Elle est sans danger pour l’homme, car très peu urticante.',
+      'Statut UICN (liste rouge des espèces menacées) : NE : Non évalué.',],
+    bibliography: [
+      'LISA-ANN GERSHWIN, 2017. Méduses et autres organismes gélatineux. Ulmer. 24 rue de Mogador 75009 Paris.',
+      'REGUIEG Aedwina, ZIEMSKI Frédéric, SITTLER Alain-Pierre in : DORIS, 30/11/2021 : Cotylorhiza tuberculata (Macri, 1778), https://doris.ffessm.fr/ref/specie/307',
+      'STEVEN, WEINBERG, 2015. Découvrir la vie sous-marine Méditerranée. 2 rue du Marais - ZAC du Puits d’Ordet 73190 CHALLES-LES-EAUX FRance : GAP. ISBN 978-2-7417-0533-8.',
+      'NATURELLE, Museum national d’Histoire, [sans date]. Cotylorhiza tuberculata (Macri, 1778). Inventaire National du Patrimoine Naturel [en ligne]. Disponible à l’adresse : https://inpn.mnhn.fr/espece/cd_nom/7400',
+      ],
+    img_article_header : 'bandeau méduses.png',
+    img_article_1 : 'M_oeuf1.png',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
-];
-
 const title = 'Connaissance Abyssale';
 const image_home_page = 'bandeau_site_internet.jpg';
 
