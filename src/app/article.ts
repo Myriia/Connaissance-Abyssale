@@ -68,7 +68,7 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_piqueusemauve.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 5,
     title : 'La méduse à l’envers Indo-Pacifique,',
