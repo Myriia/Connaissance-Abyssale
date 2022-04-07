@@ -125,7 +125,7 @@ const articles: Article[] = [
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 8,
-    title : 'La Céphée ou méduse couronne en anglais,',
+    title : 'La Céphée,',
     subTitle : 'Cephea cephea',
     content : [
       'L’ombrelle mesure entre 50 et 60cm de diamètre et présente de nombreuses aspérités qui la font ressembler à une couronne. Elle se nourrit de crevettes, de poissons, de zooplanctons et d’algues. La durée de vie est courte entre 3 et 6 mois.',
