@@ -124,7 +124,7 @@ const articles: Article[] = [
     img_article_1 : 'M_oeuf1.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
-    id : 7,
+    id : 8,
     title : 'La Céphée ou méduse couronne en anglais,',
     subTitle : 'Cephea cephea',
     content : [
