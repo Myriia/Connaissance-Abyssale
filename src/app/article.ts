@@ -123,6 +123,25 @@ const articles: Article[] = [
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_oeuf1.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
+    id : 7,
+    title : 'La Céphée ou méduse couronne en anglais,',
+    subTitle : 'Cephea cephea',
+    content : [
+      'L’ombrelle mesure entre 50 et 60cm de diamètre et présente de nombreuses aspérités qui la font ressembler à une couronne. Elle se nourrit de crevettes, de poissons, de zooplanctons et d’algues. La durée de vie est courte entre 3 et 6 mois.',
+      'En plus d’avoir une apparence unique, cette méduse a la capacité d’émettre de la lumière. Elle produit de la lumière lorsqu’elle est touchée par quelquechose car elle se sent attaquée. On pense que ce mécanisme de défense est utilisé pour éblouir ses prédateurs.',
+      'Cette méduse fait parti des espèces les plus venimeuses connues, pourtant elle ne représente pas un danger pour l’humain. En Asie du Sud-Est elle est même récoltée pour être consommée.',
+      'Cette espèce affectionne les eaux froides et sombres. Elle vit principalement dans les eaux profondes le jour et remonte à la surface pendant la nuit.  On la retrouve dans les eaux de différentes mers et océans de la planète comme l’océan Indo-Pacifique, la Mer Rouge, au large de l‘Atlantique.',
+      'Statut UICN (liste rouge des espèces menacées) : NE : non évalué.'
+    ],
+    bibliography: [
+      '21 Crown Jellyfish Facts You’ll Never Forget. Disponible à l’adresse : https://kidadl.com/animal-facts/crown-jellyfish-facts',
+      'Cephea cephea, Crowned jellyfish : fisheries. Disponible à l’adresse : https://www.sealifebase.ca/summary/Cephea-cephea.html',
+      'Crown Jellyfish. Exotic Aquaculture. Disponible à l’adresse : https://www.exoticaquaculture.com/crown-jellyfish'
+    ],
+    img_article_header : 'bandeau méduses.png',
+    img_article_1 : 'cephea cephea.jpg',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
 ];
 const title = 'Connaissance Abyssale';
