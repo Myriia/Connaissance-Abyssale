@@ -163,7 +163,7 @@ const articles: Article[] = [
       
     ],
     img_article_header : 'bandeau méduses.png',
-    img_article_1 : 'M_aequorea victoria.png',
+    img_article_1 : 'M_aequorea victoria.jpg',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
 ];
