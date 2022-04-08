@@ -122,7 +122,7 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_oeuf1.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 8,
     title : 'La Céphée,',
@@ -141,6 +141,27 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'cephea cephea.jpg',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
+    id : 9,
+    title : 'La méduse cristal,',
+    subTitle : 'Aequorea victoria',
+    content : [
+      'Cet organisme est essentiellement transparent, d’où son appellation sous le nom de méduse cristal. Son ombrelle est en forme de dôme plat, avec une centaine de canaux rayonnants et d’où partent jusqu’à 150 tentacules. Cette méduse consomme des larves, du plancton et des crustacés. Elle utilise ses tentacules collants pour injecter du venin dans le corps de la proie. Elle est capable de s’attaquer à des proies d’environ la moitié de leur taille. La durée de vie du stade adulte (méduse) est de six mois, du printemps à l’automne. Aequorea victoria  vie essentiellement près de la côte ouest de l’Amérique du Nord.',
+      'Cette espèce de méduse a été découverte en 1902. Ce qui a attiré l’attention des scientifiques c’est sa capacité à produire des flash lumineux à la base de ses tentacules. Même si la fonction biologique de cette émission de lumière reste toujours inconnue, cet organisme a été largement étudié pendant plus d’un siècle. Notamment une des molécules impliquées dans ce phénomène appelée « protéine fluorescente verte » ou GFP. C’est une molécule qui est étudiée à travers le monde de la biologie cellulaire aujourd’hui et qui permet au chercheur de localiser et étudier les gènes du monde vivant. Cette molécule présente de nombreuses applications médicales comme par exemple : elle permet de  marquer les cellules cancéreuses, de cartographier la propagation du virus du sida ou encore d’examiner comment le cerveau traduit les signaux sensoriels en réponses motrice. Les découvreurs de cette molécule, Osamu Shimomura et ses collègues, ont remporté le prix Nobel de chimie 2008 pour leurs travaux sur la GFP.',
+      'Depuis le début des années 60, et pendant plusieurs décennies, la méduse Aequorea victoria  a été intensément récoltée.  Aucune étude n’a été faite sur l’état de la population de cette espèce. Il est donc difficile d’affirmer si Aequorea victoria  a fortement souffert de tous les prélèvements qui ont été fait, et dans quel état est la population actuelle. À l’heure actuelle, aucun effort de conservation n’est en place pour cet organisme.',
+      'Statut UICN (liste rouge des espèces menacées) : NE : non évalué.'
+    ],
+    bibliography: [
+      'Bioluminescence of Aequorea. Disponible à l’adresse : https://faculty.washington.edu/cemills/Aequorea.html',
+      'Crystal Structure of the Aequorea victoria Green Fluorescent Protein on JSTOR. Disponible à l’adresse : https://www-jstor-org-s.docadis.univ-tlse3.fr/stable/2891419',
+      'Green Fluorescent Protein - GFP Timeline. Disponible à l’adresse : https://www.conncoll.edu/ccacad/zimmer/GFP-ww/timeline.html',
+      'JELLYFISH, BioExpedition |, 2012. Aequorea Victoria. BioExpedition. Disponible à l’adresse : https://www.bioexpedition.com/aequorea-victoria/',
+      'LISA-ANN GERSHWIN, 2017. Méduses et autres organismes gélatineux. Ulmer. 24 rue de Mogador 75009 Paris.'
+      
+    ],
+    img_article_header : 'bandeau méduses.png',
+    img_article_1 : 'M_aequorea victoria.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
 ];
