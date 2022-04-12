@@ -10,11 +10,17 @@ enum TYPE_ARTICLE {
   NO = 'no'
 }
 
+export enum MODEL_ARTICLE {
+  TYPE_BASIQUE,
+  TYPE_1
+}
+
 interface Article{
   id: number;
+  modelArticle: MODEL_ARTICLE;
   title:string;
   subTitle?:string;
-  content:string[];
+  content:any;
   bibliography?:string[];
   img_article_presentation?:string;
   img_article_header?:string;
@@ -45,6 +51,7 @@ const a_propos: APropos = {
 const articles: Article[] = [
   {
     id : 0,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     title : 'Article non trouvé',
     content : [
       'Nous n\'avons pas trouvé l\'article spécifié.',
@@ -53,6 +60,7 @@ const articles: Article[] = [
     types : [TYPE_ARTICLE.NO],
   },{
     id : 4,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     title : 'Pelagie, acalèphe brillante,',
     subTitle : 'Pelagia noctiluca',
     content : [
@@ -68,9 +76,11 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_piqueusemauve.png',
+    img_article_presentation : 'M_piqueusemauve.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 5,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     title : 'La méduse à l’envers Indo-Pacifique,',
     subTitle : 'Cassiopea andromeda',
     content : [
@@ -83,10 +93,12 @@ const articles: Article[] = [
       'LISA-ANN GERSHWIN, 2017. Méduses et autres organismes gélatineux. Ulmer. 24 rue de Mogador 75009 Paris.'
       ],
     img_article_header : 'bandeau méduses.png',
+    img_article_presentation : 'M_alenvers.png',   
     img_article_1 : 'M_alenvers.png',
     types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 6,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     title : 'La méduse immortelle,',
     subTitle : 'Turritopsis dohrnii',
     content : [
@@ -101,10 +113,12 @@ const articles: Article[] = [
       'MATSUMOTO, Yui, PIRAINO, Stefano et MIGLIETTA, Maria Pia, 2019. Transcriptome Characterization of Reverse Development in Turritopsis dohrnii (Hydrozoa, Cnidaria). G3: Genes|Genomes|Genetics [en ligne]. 16 octobre 2019. Vol. 9, n° 12, pp. 4127‑4138. [Consulté le 16 février 2022]. DOI 10.1534/g3.119.400487. Disponible à l’adresse : <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6893190/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6893190/</a>',
       ],
     img_article_header : 'bandeau méduses.png',
+    img_article_presentation : 'Immortelle.png',
     img_article_1 : 'Immortelle.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 7,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     title : 'La méduse œuf au plat,',
     subTitle : 'Cotylorhiza tuberculata',
     content : [
@@ -121,8 +135,55 @@ const articles: Article[] = [
       'NATURELLE, Museum national d’Histoire, [sans date]. Cotylorhiza tuberculata (Macri, 1778). Inventaire National du Patrimoine Naturel [en ligne]. Disponible à l’adresse : https://inpn.mnhn.fr/espece/cd_nom/7400'
     ],
     img_article_header : 'bandeau méduses.png',
+    img_article_presentation : 'M_oeuf1.png',
     img_article_1 : 'M_oeuf1.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
+    id : 8,
+    modelArticle: MODEL_ARTICLE.TYPE_1,
+    title : 'Qu’est-ce que la classification ?',
+    img_article_header: 'Bandeau.png',
+    img_article_presentation: 'Bandeau.png',
+    content : 
+    [      
+      // Partie 1
+      {
+        img: null,
+        text : [
+          [
+            'Cet article va servir de préambule à la rubrique « Arbre Phylogénétique ». Je vais y définir ce qu’est la classification du vivant, pour que vous puissiez vous approprier plus facilement le contenu qui en parlera.',
+          ],
+          [
+            'Pourquoi ce besoin de classer ?',
+            'Tout simplement pour pouvoir parler de façon claire du monde du vivant. Comme le dit Professeur Lecointre : « Si vous voulez parler de la nature là dehors, et que chaque arbre porte un prénom, chaque mouche porte un prénom, vous ne pourriez pas parler de la nature de manière générale ». Il y a donc une nécessité de créer des groupes pour pouvoir en parler.',
+            'Quand on parle d’un organisme et que l’on veut le placer sur l’arbre du vivant, on va jouer aux poupées russes. Pour chaque organisme, on attribue une série d’étiquettes qui correspondent aux différentes boîtes dans lesquelles cet organisme est rangé. Ces boîtes sont les niveaux hiérarchiques de la classification scientifique du monde vivant. La plus petite est celle de l’espèce est la plus grande celle du règne. Entre, on a tout un ensemble de boîtes qui forment une pyramide. Les sept principales boîtes sont les suivantes : Espèce – Genre – Famille – Ordre – Classe – Embranchement -  Règne.',
+          ],
+          [
+            'La classification du vivant repose sur la phylogénie. Issue des mots grecques phylo- et -genesis, il s’agit de la science qui explique les relations de parentés entre les espèces. On construit alors des arbres phylogénétiques où les branches représentent ces relations. Plus le nombre de croisements de branches (les nœuds) entre deux espèces est important, plus elles sont éloignées.',
+            'Pour construire ces arbres, on regarde les relations de parentés entre les espèces en se demandant qui est le plus proche cousin de qui. La réponse à ce questionnement repose sur différents critères, dont les principaux sont morphologiques et génétique. Il en existe d’autres tels que le comportement mais ils sont moins fiables. La classification du monde du vivant est en constante évolution avec les critères qui changent avec les avancées technologiques.'
+          ],
+          [
+            'Maintenant que nous avons défini l’outil qui va nous permettre de parler de parenté entre les différents organismes, nous allons s’intéresser à la classification des animaux marins.',
+            'Sur ce site, j’ai décidé de vous présenter exclusivement la classification des animaux marins. Dans cet article, nous allons aborder succinctement les différents embranchements de cet arbre. Dans les prochains articles de la rubrique « Arbre Phylogénétique », je viendrai parler plus en détail de chacun de ces embranchements.'
+          ]
+        ]
+      },
+      // Partie 2
+      {
+        img: 'ArbreMondeMarin.png',
+        legendeImg: 'Arbre phylogénétique représentant la classification des animaux marins.',
+        text: [
+          'L’arbre dont nous allons parler est illustré ci-dessus. Ce qui rend chaque embranchement unique est l’acquisition de certains caractères communs qui sont ici numérotées. Ces caractères s’appellent des synapomorphies. ',
+          'Tout d’abord, le point commun à tous ces organismes est qu’ils sont constitués de plusieurs cellules (1).  Les Eponges sont des animaux fixés au substrat qui filtrent l’eau de mer. Les Placozoaires sont des animaux aplatis  sans organes, seulement six types de cellules  ayant chacune un rôle différent. Ces deux premiers embranchements sont les plus simples en termes de complexité du corps de l’organisme.',
+          'Ensuite, vient l’embranchement des Cnidaires où on trouve notamment les méduses et le corail qui partagent l’acquisition de cellules urticantes : les cnidocytes (2). ',
+          'Tous les organismes se trouvant après le nœud n°3 ont un corps avec une symétrie gauche-droite, appelée symétrie bilatérale. Parmi les embranchements suivant le nœud n°3, certains de ces animaux ont la bouche qui se forme avant l’anus durant le développement de l’embryon (4). Chacun de ces embranchements possède ces synapomorphies : les Mollusques comme les nudibranches et pieuvres ont un corps mou (5) ; les Annélides ont aussi un corps mou mais organisé en segments en forme d’anneau (6) ; enfin ce qui caractérise les Arthropodes comme les crabes et araignées de mer est l’acquisition d’un squelette externe et la réalisation de mues au cours de la vie de l’animal (7).',
+          'Quant aux organismes qui se trouvent après le nœud n°8, ils ont la bouche qui se forme après l’anus.  Parmi eux, les Echinodermes, comme les étoiles de mer et les oursins, partagent le fait d’avoir une symétrie en cinq (pentaradié) et des podia, qui sont des petits pieds à ventouses.',
+          'Ensuite, les organismes situés après le nœud n°10 possède une colonne vertébrale ou une de ses formes ancestrale appelée la chorde. Les céphalocordés ont la chorde en avant de la bouche (11).  Les Tuniciers sont des animaux fixés qui ressemblent à des éponges, cependant ceux-ci possèdent une corde ainsi que deux siphons pour filtrer l’eau de mer (12).',
+          'Certains organismes ont une chorde qui s’est développée en vertèbres (13). Parmi ces animaux, certains ont un squelette cartilagineux (14) et les autres ont un squelette osseux (15).  Enfin, les deux dernières synapomorphies sont celles des nageoires rayonnées (16) pour les Poissons osseux et celle des quatre membres (17) pour les Tétrapodes.'
+        ]
+      }
+    ],
+    types : [TYPE_ARTICLE.ARBRE_PHYLO],
   }
 ];
 const title = 'Connaissance Abyssale';

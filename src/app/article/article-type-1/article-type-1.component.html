@@ -1,0 +1,65 @@
+<div>
+  <span *ngIf="article">
+
+    <img *ngIf="article.img_article_header" width="100%" alt="Bannière de l'article"
+    class="resize_fit_center mb-2"
+    [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+    article.img_article_header"/>
+
+    <!-- Title -->
+    <div>    
+      <h1 class="flex justify-content-center mb-0 title center">{{article.title}}</h1>
+      <h3 class="flex justify-content-center mt-0 mb-0 font-italic">{{article.subTitle}}</h3>
+      <div class="flex justify-content-center mt-0">
+        <div class="mt-2" *ngFor="let type of article.types" >
+          <a class="link-chip" [routerLink]="[getRouterLink(type)]"><p-chip [label]="type"></p-chip></a>
+        </div>
+      </div>
+    </div>
+
+<div *ngFor="let partie of article.content">    
+    <!-- Content -->
+    <article *ngIf="screenSize !== 'small'">
+      <article>
+          <!-- Image -->
+        <img *ngIf="partie.img" width="100%" alt="Bannière de l'article"
+             class="resize_fit_center"
+             [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + partie.img"/>
+        <p class="p-0 m-0 font-italic legende">{{partie.legendeImg}}</p>
+        <p *ngFor="let text of partie.text">
+          <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
+          <br>
+        </p>
+      </article>
+    </article>
+    <div class="ml-2 mr-2" *ngIf="screenSize === 'small'">
+        <p *ngFor="let text of partie.content">
+          <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
+          <br>
+        </p>
+      </div>
+</div>
+     <!-- Biblio -->
+  <div class="mb-5 mt-3" *ngIf="article.bibliography && screenSize === 'small'">
+    <p-accordion>
+      <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
+        <p *ngFor="let text of article.bibliography">
+          <span [innerHTML]="text"> </span>
+          <br>
+        </p>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <article class="mb-5 mt-3" *ngIf="article.bibliography && screenSize !== 'small'">
+    <p-accordion>
+      <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
+        <p *ngFor="let text of article.bibliography">
+          <span [innerHTML]="text"> </span>
+          <br>
+        </p>
+      </p-accordionTab>
+    </p-accordion>
+  </article>
+
+  </span>
+</div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MODEL_ARTICLE } from '../article';
 import {online} from "../config";
 
 @Component({
@@ -12,6 +13,7 @@ export class ArticlePresentationComponent implements OnInit {
   article: any;
   @Input()
   screenSize: string = "large";
+  MODEL_ARTICLE= MODEL_ARTICLE;
 
   online = online;
 

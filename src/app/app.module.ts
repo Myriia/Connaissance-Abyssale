@@ -35,6 +35,8 @@ import {ChartModule} from "primeng/chart";
 import {AccordionModule} from "primeng/accordion";
 import {SidebarModule} from 'primeng/sidebar';
 import { CommonModule } from '@angular/common';
+import { ArticleBasiqueComponent } from './article/article-basique/article-basique.component';
+import { ArticleType1Component } from './article/article-type-1/article-type-1.component';
 
 const routes: Routes = [
   {path: 'glossaire', component: GlossaireComponent},
@@ -64,6 +66,8 @@ const routes: Routes = [
     ProtectionEtConservationComponent,
     TitleComponent,
     ArticleComponent,
+    ArticleBasiqueComponent,
+    ArticleType1Component,
     AboutComponent
   ],
   imports: [
