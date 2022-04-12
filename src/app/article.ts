@@ -22,7 +22,7 @@ interface Article{
   subTitle?:string;
   content:any;
   bibliography?:string[];
-  img_article_presentation?:string;
+  img_article_presentation:string;
   img_article_header?:string;
   img_article_1?:string;
   img_article_2?:string;
@@ -140,7 +140,7 @@ const articles: Article[] = [
     types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 8,
-    modelArticle: MODEL_ARTICLE.TYPE_1,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     title : 'La Céphée,',
     subTitle : 'Cephea cephea',
     content : [
@@ -157,11 +157,12 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'cephea cephea.jpg',
+    img_article_presentation : 'cephea cephea.jpg',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 9,
     title : 'La méduse cristal,',
-    modelArticle: MODEL_ARTICLE.TYPE_1,
+    modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
     subTitle : 'Aequorea victoria',
     content : [
       'Cet organisme est essentiellement transparent, d’où son appellation sous le nom de méduse cristal. Son ombrelle est en forme de dôme plat, avec une centaine de canaux rayonnants et d’où partent jusqu’à 150 tentacules.',
@@ -181,9 +182,10 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_aequorea victoria.png',
+    img_article_presentation: 'M_aequorea victoria.png',
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
-    id : 8,
+    id : 10,
     modelArticle: MODEL_ARTICLE.TYPE_1,
     title : 'Qu’est-ce que la classification ?',
     img_article_header: 'Bandeau.png',

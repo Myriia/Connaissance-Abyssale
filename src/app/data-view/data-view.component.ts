@@ -19,6 +19,7 @@ export class DataViewComponent implements OnInit {
   ngOnInit(): void {
     this.chooseScreenSize();
     this.articles = articles.filter(article => article.types?.includes(this.type));
+    this.articles.sort((a, b) => (a.id < b.id) ? 1 : -1)
   }
 
   @HostListener('window:resize', ['$event'])
