@@ -102,7 +102,7 @@ const articles: Article[] = [
       ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'Immortelle.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 7,
     title : 'La méduse œuf au plat,',
@@ -164,6 +164,30 @@ const articles: Article[] = [
     ],
     img_article_header : 'bandeau méduses.png',
     img_article_1 : 'M_aequorea victoria.png',
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+  },{
+    id : 10,
+    title : 'La méduse Aurélie,',
+    subTitle : 'Aurelia aurita',
+    content : [
+      '<i>Aurelia aurita</i> est l’organisme modèle souvent utilisé dans les cours de biologie pour parler des méduses. On l’appelle méduse commune, mais aussi méduse bleue ou méduse lune. Elle doit ses surnoms à sa couleur bleutée translucide.',
+      'Cet organisme est facilement identifiable la présence de quatre fers à cheval clairs qui sont situés sous son ombrelle. Il s’agit des gonades. Ce sont des organes sexuels qui produisent les gamètes (spermatozoïdes ou ovules). L’ombrelle peut mesurer entre 5 et 40 cm et est bordée de nombreux tentacules fins qui peuvent être au nombre de 1200. La bouche, située sous l’ombrelle, est entourée de quatre bras buccaux plus ou moins développés. Comme chez les autres méduses, la bouche, unique orifice digestif, sert aussi d’anus. Le régime alimentaire de cette méduse est composé principalement de larves de hareng et de petits crustacés. Elle peut également manger d’autres méduses et même ses propres larves. Afin d’assurer sa croissance et sa reproduction, une méduse doit consommer plusieurs fois son poids en nourriture par jour. C’est pourquoi, quand elle est jeune cette méduse peut consommer jusqu’à 60 larves de harengs par jours. <i>Aurelia aurita</i> vie dans toutes les mers du globe excepté dans les eaux froides des zones polaires, on dit qu’elle est cosmopolite.',
+      'Du fait que cette espèce peut être maintenue facilement en aquarium et qu’elle est à la base de la chaîne alimentaire, elle fait l’objet de nombreuses études. Les chercheurs partent du principe que si des effets sont retrouvés chez Aurelia aurita, alors ils pourraient avoir des effets en cascade dans le reste de l’écosystème. Dans cet article j’ai décidé de vous présenter deux types d’études qui ont été menée sur Aurélia aurita : l’influence des paramètres environnementaux et celle des microplastiques sur cet organisme.',
+      'Il faut savoir que le cycle de vie de cet animal est rythmé par différents paramètres du milieu, comme la température ou la salinité. Il a été montré que la température peut accélérer ou inhiber certains stades de vie d’<i>Aurélia aurita</i>. Dans le cadre d’un réchauffement global des mers et océans, si la température de l’eau atteint le seuil auquel la croissance de cette méduse est inhibée, cela pourrait s’avérer fatal pour l’espèce. ',
+      'D’autres études se sont intéressées à l’effet des microplastiques à court terme sur <i>Aurelia aurita</i>. Ce que l’on appelle microplastiques ce sont des particules de plastiques mesurant mois de cinq millimètres. Il s’agit d’un sujet très important car d’ici 2060, on estime que 265 millions de tonnes de plastique mal géré seront générées chaque année, dont 91 % se retrouveront dans  les océans. Le microplastique présent dans les mers et océans a deux origines : la dégradation de gros morceaux de plastique ou le rejet de microplastiques présents dans les cosmétiques. Cette forme de pollution représente un problème planétaire car il a été signalé que près de 700 espèces marines dans le monde ingèrent ou s’emmêlent dans des débris marins, dont 92 % sont des plastiques. Dans le cadre d’une de ces études il a été montré que la méduse Aurélie peut capturer les microbilles de polystyrène vierge mais aussi les reconnaitre comme des «particules non alimentaires» en les rejetant. Il important de souligner que les microbilles vierges utilisées dans l’étude sont moins nocives que certains microplastiques vieillis retrouvés dans les océans.  Aujourd’hui les études des microplastiques sont faites sur le cours terme, aucune étude n’a montré les effets d’une longue exposition à ces polluants. Des études complémentaires sont donc nécessaires.',
+      'Statut UICN (liste rouge des espèces menacées) : NE : non évalué.'
+     ],
+    bibliography: [
+      'MARAN Vincent, SCAPS Patrick, GOY Jacqueline, SITTLER Alain-Pierre, ZIEMSKI Frédéric in : DORIS, 05/12/2020 : Aurelia aurita (Linnaeus, 1758), https://doris.ffessm.fr/ref/specie/129',
+      '(La méduse Aurélie - Oceanopolis [sans date])COSTA, Elisa, GAMBARDELLA, Chiara, PIAZZA, Veronica, GRECO, Giuliano, LAVORANO, Silvia, BELTRANDI, Martina, BONGIOVANNI, Elisabetta, GNONE, Guido, FAIMALI, Marco et GARAVENTA, Francesca, 2015. Effect of neurotoxic compounds on ephyrae of Aurelia aurita jellyfish. Hydrobiologia [en ligne]. 1 octobre 2015. Vol. 759, n° 1, pp. 75‑84.',
+      'Limited ingestion, rapid egestion and no detectable impacts of microbeads on the moon jellyfish, Aurelia aurita, 2020. Marine Pollution Bulletin [en ligne]. Vol. 156, pp. 111208.',
+      'SOKOŁOWSKI, Adam, BRULIŃSKA, Dominika, OLENYCZ, Michał et WOŁOWICZ, Maciej, 2016. Does temperature and salinity limit asexual reproduction of Aurelia aurita polyps (Cnidaria: Scyphozoa) in the Gulf of Gdańsk (southern Baltic Sea)? An experimental study. Hydrobiologia [en ligne]. 1 juin 2016. Vol. 773, n° 1, pp. 49‑62.',
+      'SUKHOPUTOVA, A. V. et KRAUS, Yu. A., 2017. Environmental factors inducing the transformation of polyp into medusae in Aurelia aurita (Scyphozoa). Russian Journal of Developmental Biology [en ligne]. mars 2017. Vol. 48, n° 2, pp. 106‑116.',
+      'La méduse Aurélie : fiche d’identité, lieu de vie, alimentation, taille, [sans date]. Aquarium Nausicaa : Centre National de la Mer à Boulogne-sur-Mer [en ligne]. [Consulté le 8 avril 2022]. Disponible à l’adresse : https://www.nausicaa.fr/fiches-animaux/la-meduse-aurelie/'
+      
+    ],
+    img_article_header : 'bandeau méduses.png',
+    img_article_1 : 'M_Aurelie.png'
     types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   }
 ];
