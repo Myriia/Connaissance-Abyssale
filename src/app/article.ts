@@ -115,7 +115,7 @@ const articles: Article[] = [
     img_article_header : 'bandeau méduses.png',
     img_article_presentation : 'Immortelle.png',
     img_article_1 : 'Immortelle.png',
-    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
+    types : [TYPE_ARTICLE.CURIOSITE],
   },{
     id : 7,
     modelArticle: MODEL_ARTICLE.TYPE_BASIQUE,
@@ -209,7 +209,7 @@ const articles: Article[] = [
     img_article_header : 'bandeau méduses.png',
     img_article_presentation : 'M_Aurelie.png',   
     img_article_1 : 'M_Aurelie.png',
-    types : [TYPE_ARTICLE.CURIOSITE],
+    types : [TYPE_ARTICLE.CURIOSITE, TYPE_ARTICLE.LA_UNE],
   },{
     id : 11,
     modelArticle: MODEL_ARTICLE.TYPE_1,
