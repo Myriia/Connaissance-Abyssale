@@ -252,7 +252,7 @@ const articles: Article[] = [
           'Quant aux organismes qui se trouvent après le nœud n°8, ils ont la bouche qui se forme après l’anus.  Parmi eux, les Echinodermes, comme les étoiles de mer et les oursins, partagent le fait d’avoir une symétrie en cinq (pentaradié) et des podia, qui sont des petits pieds à ventouses.',
           'Ensuite, les organismes situés après le nœud n°10 possède une colonne vertébrale ou une de ses formes ancestrale appelée la chorde. Les céphalocordés ont la chorde en avant de la bouche (11).  Les Tuniciers sont des animaux fixés qui ressemblent à des éponges, cependant ceux-ci possèdent une corde ainsi que deux siphons pour filtrer l’eau de mer (12).',
           'Certains organismes ont une chorde qui s’est développée en vertèbres (13). Parmi ces animaux, certains ont un squelette cartilagineux (14) et les autres ont un squelette osseux (15).  Enfin, les deux dernières synapomorphies sont celles des nageoires rayonnées (16) pour les Poissons osseux et celle des quatre membres (17) pour les Tétrapodes.',
-          'Maintenant vous savez ce qu’est un arbre phylogénétique et à quoi il sert ! Dans les prochains articles je reviendrai plus en détail sur chacun de ces embranchements !"
+          'Maintenant vous savez ce qu’est un arbre phylogénétique et à quoi il sert ! Dans les prochains articles je reviendrai plus en détail sur chacun de ces embranchements !'
         ]
       }
     ],
