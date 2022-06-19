@@ -12,6 +12,7 @@ import { DividerModule } from "primeng/divider";
 import { ChipModule } from "primeng/chip";
 import {MenubarModule} from 'primeng/menubar';
 import {DataViewModule} from 'primeng/dataview';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -24,7 +25,8 @@ import { DataViewComponent } from './data-view/data-view.component';
 import { HeaderDataViewComponent } from './header-data-view/header-data-view.component';
 import {GlossaireComponent} from "./pages/glossaire/glossaire.component";
 import {ScrollPanelModule} from "primeng/scrollpanel";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CheckboxModule} from 'primeng/checkbox';
 import {BiomimetismeComponent} from "./pages/biomimetisme/biomimetisme.component";
 import {ProtectionEtConservationComponent} from "./pages/protection-et-conservation/protection-et-conservation.component";
 import {TitleComponent} from "./title/title.component";
@@ -37,8 +39,13 @@ import {SidebarModule} from 'primeng/sidebar';
 import { CommonModule } from '@angular/common';
 import { ArticleBasiqueComponent } from './article/article-basique/article-basique.component';
 import { ArticleType1Component } from './article/article-type-1/article-type-1.component';
+import { FormComponent } from './form/form.component';
+import {FileUploadModule} from 'primeng/fileupload';
+import {HttpClientModule} from '@angular/common/http';
+import {DialogModule} from 'primeng/dialog';
 
 const routes: Routes = [
+  {path: 'form', component: FormComponent},
   {path: 'glossaire', component: GlossaireComponent},
   {path: 'about', component: AboutComponent},
   {path: 'curiosities', component: CuriositiesComponent},
@@ -68,7 +75,8 @@ const routes: Routes = [
     ArticleComponent,
     ArticleBasiqueComponent,
     ArticleType1Component,
-    AboutComponent
+    AboutComponent,
+    FormComponent
   ],
   imports: [
     AccordionModule,
@@ -88,7 +96,13 @@ const routes: Routes = [
     BrowserAnimationsModule,
     ChartModule,
     SidebarModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    InputTextareaModule,
+    CheckboxModule,
+    FileUploadModule,
+    HttpClientModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

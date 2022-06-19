@@ -17,26 +17,43 @@
       </div>
     </div>
 
-<div *ngFor="let partie of article.content">    
+  <div *ngFor="let partie of article.content">    
     <!-- Content -->
     <article *ngIf="screenSize !== 'small'">
       <article>
           <!-- Image -->
-        <img *ngIf="partie.img" width="100%" alt="Bannière de l'article"
+        <img *ngIf="partie.img && !isFormForArticleImageType1" width="100%" alt="Bannière de l'article"
              class="resize_fit_center"
              [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + partie.img"/>
+        
+        <img *ngIf="partie.img && isFormForArticleImageType1" width="100%" alt="Bannière de l'article" 
+             class="mt-3" type="file" accept="image/png, image/jpeg, image/jpg" [src]="partie.img"/>
         <p class="p-0 m-0 font-italic legende">{{partie.legendeImg}}</p>
         <p *ngFor="let text of partie.text">
-          <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span *ngFor="let t of text">
+            <span [innerHTML]="t"></span><br>
+          </span>
           <br>
         </p>
       </article>
     </article>
     <div class="ml-2 mr-2" *ngIf="screenSize === 'small'">
-        <p *ngFor="let text of partie.content">
-          <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
-          <br>
-        </p>
+            <!-- Image -->
+            <img *ngIf="partie.img && !isFormForArticleImageType1" width="100%" alt="Bannière de l'article"
+                class="resize_fit_center"
+                [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + partie.img"/>
+            <img *ngIf="partie.img && isFormForArticleImageType1" width="100%" alt="Bannière de l'article" 
+            class="mt-3" type="file" accept="image/png, image/jpeg, image/jpg" [src]="partie.img"/>
+          
+            <p class="p-0 m-0 font-italic legende">{{partie.legendeImg}}</p>
+            <p *ngFor="let text of partie.text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span *ngFor="let t of text">
+                <span [innerHTML]="t"></span><br>
+              </span>
+              <br>
+            </p>
       </div>
 </div>
      <!-- Biblio -->

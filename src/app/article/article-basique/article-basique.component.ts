@@ -15,6 +15,12 @@ export class ArticleBasiqueComponent {
   @Input()
   article: Article | undefined;
 
+  @Input()
+  isFormForImageHeader: boolean | undefined;
+
+  @Input()
+  isFormForImageArticle: boolean | undefined;
+
   online = online;
 
   public getRouterLink(typeArticle: String) {

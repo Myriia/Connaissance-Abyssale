@@ -1,10 +1,13 @@
 <div>
   <span *ngIf="article">
 
-    <img *ngIf="article.img_article_header" width="100%" alt="Bannière de l'article"
+    <img *ngIf="article.img_article_header && !isFormForImageHeader" width="100%" alt="Bannière de l'article"
     class="resize_fit_center mb-2"
-    [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
+    [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/': '../assets/') +
     article.img_article_header"/>
+
+    <img *ngIf="article.img_article_header && isFormForImageHeader" width="100%" alt="Bannière de l'article"
+    class="resize_fit_center mb-2" type="file" accept="image/png, image/jpeg, image/jpg" [src]="article.img_article_header"/>
 
     <!-- Title -->
     <div>    
@@ -20,9 +23,12 @@
     <!-- Content -->
     <article *ngIf="screenSize !== 'small'">
       <article>
-        <img width="50%" alt="Bannière de l'article" 
+        <img *ngIf="article.img_article_1 && !isFormForImageArticle" width="50%" alt="Bannière de l'article" 
         class="image1 mr-3 mb-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
+         <img *ngIf="article.img_article_1 && isFormForImageArticle" width="50%" alt="Bannière de l'article" 
+         class="image1 mr-3 mb-3" type="file" accept="image/png, image/jpeg, image/jpg" [src]="article.img_article_1"/>
+         
         <p *ngFor="let text of article.content">
           <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
           <br>
@@ -30,9 +36,11 @@
       </article>
     </article>
     <div class="ml-2 mr-2" *ngIf="screenSize === 'small'">
-        <img width="100%" alt="Bannière de l'article" 
+        <img *ngIf="article.img_article_1 && !isFormForImageArticle" width="100%" alt="Bannière de l'article" 
         class="mt-3" [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
          article.img_article_1"/>
+        <img *ngIf="article.img_article_1 && isFormForImageArticle" width="100%" alt="Bannière de l'article" 
+        class="mt-3" type="file" accept="image/png, image/jpeg, image/jpg" [src]="article.img_article_1"/>
         <p *ngFor="let text of article.content">
           <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
           <br>
