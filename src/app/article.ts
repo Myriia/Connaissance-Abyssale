@@ -26,7 +26,7 @@ interface Article{
   img_article_header?:string;
   img_article_1?:string;
   img_article_2?:string;
-  types:TYPE_ARTICLE[];
+  types:TYPE_ARTICLE[]|string[];
 }
 
 interface APropos{

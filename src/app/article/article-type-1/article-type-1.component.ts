@@ -15,9 +15,6 @@ export class ArticleType1Component {
   @Input()
   article: Article | undefined;
 
-  @Input()
-  isFormForArticleImageType1: boolean | undefined;
-
   online = online;
 
   public getRouterLink(typeArticle: String) {

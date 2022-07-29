@@ -1,0 +1,54 @@
+<div>
+    <h2>Contenu : </h2>
+    <div *ngIf="getNbPartie() == 0" class="col-12 flex justify-content-end">
+        <button pButton type="button" label="+ partie ↓" class="p-button-text p-button-success" (click)="addPartie(i+1)"></button>
+    </div>
+    <div class="grid my-3 bg-blue-100 p-1" *ngFor="let controlPartie of form?.controls; let i = index"> 
+        <div class="col-12 font-bold bg-blue-200 flex">
+            <button pButton pRipple type="button" icon="pi pi-times" class="p-button-text p-button-danger" (click)="removePartie(i)"></button>
+            <p>Partie {{i+1}} </p>
+        </div>
+        <div class="col-12 flex justify-content-end">
+            <button pButton type="button" label="+ partie ↑" class="p-button-text p-button-success" (click)="addPartie(i)"></button>
+        </div>
+
+        <ca-form-image 
+            title="Image de la partie :"
+            [formName]="controlPartie.get('img_name')" 
+            [form]="controlPartie.get('img')"
+            [formHasBeenUpdated]="controlPartie.get('from_form')"></ca-form-image>
+
+
+        <div class="col-12" *ngIf="controlPartie.get('img').value !== null">
+            <h2>Legende de l'image: </h2>
+            <textarea class="col-12" pInputTextarea [formControl]="controlPartie.get('legendeImg')"></textarea>                        
+        </div>
+
+        <button *ngIf="getNbParagraphe(i) == 0" pButton type="button" label="+ paragraphe ↓" class="p-button-text p-button-success" (click)="addParagraphe(i,0)"></button>
+        <span class="w-full bg-indigo-100 p-1" *ngFor="let controlText of controlPartie.get('text')?.controls; let j = index">
+            <div class="col-12 font-bold bg-indigo-200 flex">
+                <button pButton pRipple type="button" icon="pi pi-times" class="p-button-text p-button-danger" (click)="removeParagraphe(i,j)"></button>
+                <p>Paragraphe {{i+1}}.{{j+1}} </p>
+            </div>
+            <div class="col-12 flex justify-content-end">
+                <button pButton type="button" label="+ paragraphe ↑" class="p-button-text p-button-success" (click)="addParagraphe(i,j)"></button>
+            </div>
+            
+            <button *ngIf="getNbText(i,j) == 0" pButton type="button" label="+ text ↓" class="p-button-text" (click)="addText(i,j,0)"></button>
+            <div *ngFor="let text of controlText?.controls; let k = index">
+                <textarea class="col-12" pInputTextarea [formControl]="text"></textarea>
+                <div class="col-12 flex justify-content-end">
+                    <button pButton type="button" label="+ text ↑" class="p-button-text" (click)="addText(i,j,k)"></button>
+                    <button pButton type="button" label="+ text ↓" class="p-button-text" (click)="addText(i,j,k+1)"></button>
+                    <button pButton pRipple type="button" icon="pi pi-times" class="p-button-text p-button-danger" (click)="removeText(i,j)"></button>
+                </div>
+            </div>
+            <div class="col-12 flex justify-content-end">
+                <button pButton type="button" label="+ paragraphe ↓" class="p-button-text p-button-success" (click)="addParagraphe(i,j+1)"></button>
+            </div>
+        </span>
+        <div class="col-12 flex justify-content-end">
+            <button pButton type="button" label="+ partie ↓" class="p-button-text p-button-success" (click)="addPartie(i+1)"></button>
+        </div>
+    </div>
+</div>

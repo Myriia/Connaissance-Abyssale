@@ -1,0 +1,16 @@
+<div>
+    <h2>{{title}}</h2>
+    <div class="flex">
+        <p-fileUpload mode="basic" maxFileSize="100000000" 
+            [customUpload]="true" (uploadHandler)="changeImage($event)"></p-fileUpload>
+
+        <img class="mx-2" *ngIf="!hasBeenUpdated && getImage()" 
+            [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + getImage()" width="34px" />
+
+        <img class="mx-2" *ngIf="hasBeenUpdated && getImage()" type="file" accept="image/png, image/jpeg, image/jpg" 
+            [src]="getImage()" width="34px"/>
+
+        <button *ngIf="getImage() !== null" pButton pRipple type="button" icon="pi pi-times" class="p-button-text p-button-danger" 
+            (click)="removeImage()"></button>
+    </div>
+</div>

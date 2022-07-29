@@ -1,10 +1,12 @@
 <div>
   <span *ngIf="article">
-
-    <img *ngIf="article.img_article_header" width="100%" alt="Bannière de l'article"
+    <img *ngIf="article.img_article_header && !article.img_article_header_is_for_form" width="100%" alt="Bannière de l'article"
     class="resize_fit_center mb-2"
     [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') +
     article.img_article_header"/>
+    
+    <img *ngIf="article.img_article_header && article.img_article_header_is_for_form" width="100%" alt="Bannière de l'article"
+    class="resize_fit_center mb-2" type="file" accept="image/png, image/jpeg, image/jpg" [src]="article.img_article_header"/>
 
     <!-- Title -->
     <div>    
@@ -22,12 +24,13 @@
     <article *ngIf="screenSize !== 'small'">
       <article>
           <!-- Image -->
-        <img *ngIf="partie.img && !isFormForArticleImageType1" width="100%" alt="Bannière de l'article"
-             class="resize_fit_center"
-             [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + partie.img"/>
-        
-        <img *ngIf="partie.img && isFormForArticleImageType1" width="100%" alt="Bannière de l'article" 
-             class="mt-3" type="file" accept="image/png, image/jpeg, image/jpg" [src]="partie.img"/>
+        <img *ngIf="partie.img && !partie.from_form" width="100%" alt="Bannière de l'article"
+          class="resize_fit_center"
+          [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + partie.img"/>
+            
+        <img *ngIf="partie.img && partie.from_form" width="100%" alt="Bannière de l'article"
+          class="resize_fit_center" type="file" accept="image/png, image/jpeg, image/jpg" [src]="partie.img"/>
+
         <p class="p-0 m-0 font-italic legende">{{partie.legendeImg}}</p>
         <p *ngFor="let text of partie.text">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -40,10 +43,10 @@
     </article>
     <div class="ml-2 mr-2" *ngIf="screenSize === 'small'">
             <!-- Image -->
-            <img *ngIf="partie.img && !isFormForArticleImageType1" width="100%" alt="Bannière de l'article"
+            <img *ngIf="partie.img && !partie.from_form" width="100%" alt="Bannière de l'article"
                 class="resize_fit_center"
                 [src]="(online? 'https://myriia.github.io/Connaissance-Abyssale/assets/' : '../assets/') + partie.img"/>
-            <img *ngIf="partie.img && isFormForArticleImageType1" width="100%" alt="Bannière de l'article" 
+            <img *ngIf="partie.img && partie.from_form" width="100%" alt="Bannière de l'article" 
             class="mt-3" type="file" accept="image/png, image/jpeg, image/jpg" [src]="partie.img"/>
           
             <p class="p-0 m-0 font-italic legende">{{partie.legendeImg}}</p>
@@ -57,7 +60,7 @@
       </div>
 </div>
      <!-- Biblio -->
-  <div class="mb-5 mt-3" *ngIf="article.bibliography && screenSize === 'small'">
+  <div class="mb-5 mt-3" *ngIf="article.bibliography && article.bibliography?.length && article.bibliography.length > 0 && screenSize === 'small'">
     <p-accordion>
       <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
         <p *ngFor="let text of article.bibliography">
@@ -67,7 +70,7 @@
       </p-accordionTab>
     </p-accordion>
   </div>
-  <article class="mb-5 mt-3" *ngIf="article.bibliography && screenSize !== 'small'">
+  <article class="mb-5 mt-3" *ngIf="article.bibliography && article.bibliography?.length && screenSize !== 'small'">
     <p-accordion>
       <p-accordionTab header="Pour plus de renseignements voici la bibliographie consultée :">
         <p *ngFor="let text of article.bibliography">

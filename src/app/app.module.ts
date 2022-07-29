@@ -43,6 +43,11 @@ import { FormComponent } from './form/form.component';
 import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
 import {DialogModule} from 'primeng/dialog';
+import { FormImageComponent } from './form/form-image/form-image.component';
+import { FormBibliographyComponent } from './form/form-bibliography/form-bibliography.component';
+import { FormTypeComponent } from './form/form-type/form-type.component';
+import { FormContentArticleBasiqueComponent } from './form/form-content-article-basique/form-content-article-basique.component';
+import { FormContentArticleType1Component } from './form/form-content-article-type-1/form-content-article-type-1.component';
 
 const routes: Routes = [
   {path: 'form', component: FormComponent},
@@ -76,7 +81,14 @@ const routes: Routes = [
     ArticleBasiqueComponent,
     ArticleType1Component,
     AboutComponent,
-    FormComponent
+
+    // Form
+    FormComponent,
+    FormImageComponent,
+    FormBibliographyComponent,
+    FormTypeComponent,
+    FormContentArticleBasiqueComponent,
+    FormContentArticleType1Component
   ],
   imports: [
     AccordionModule,

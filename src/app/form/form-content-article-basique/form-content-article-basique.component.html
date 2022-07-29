@@ -1,0 +1,12 @@
+<div>
+    <h2>Contenu : </h2>
+    <button *ngIf="getSize() == 0" pButton type="button" label="ajouter ↓" class="p-button-text" (click)="add(i+1)"></button>
+    <div class="grid my-3" *ngFor="let c of form?.controls; let i = index">                
+        <textarea class="col-12" pInputTextarea [formControl]="c"></textarea>
+        <div class="col-12 flex justify-content-end">
+            <button pButton type="button" label="ajouter ↑" class="p-button-text" (click)="add(i)"></button>
+            <button pButton type="button" label="ajouter ↓" class="p-button-text" (click)="add(i+1)"></button>
+            <button pButton pRipple type="button" icon="pi pi-times" class="p-button-text p-button-danger" (click)="remove(i)"></button>
+        </div>
+    </div>
+</div>   
