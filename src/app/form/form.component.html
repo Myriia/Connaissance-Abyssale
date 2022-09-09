@@ -17,7 +17,7 @@
             <h2>Model d'article : </h2>
             <p-dropdown class="w-full" [style]="{'width':'100%'}" optionLabel='name' [options]="modelsArticle" formControlName="modelArticle"></p-dropdown>
             
-            <p *ngIf="getArticle().modelArticle == MODEL_ARTICLE.TYPE_BASIQUE">Ce type d'article est principalement utilisé pour les <b>Curiosités</b>.</p>
+            <p *ngIf="getArticle().modelArticle == MODEL_ARTICLE.TYPE_0">Ce type d'article est principalement utilisé pour les <b>Curiosités</b>.</p>
             <p *ngIf="getArticle().modelArticle == MODEL_ARTICLE.TYPE_1">Ce type d'article est principalement utilisé pour les <b>arbres phylo</b>.</p>
             
             <div>
@@ -32,20 +32,23 @@
             <ca-form-image 
                 title="Image d'entête :"
                 [formName]="getFormImageHeaderName()" 
-                [form]="getFormImageHeader()"
-                [formHasBeenUpdated]="getFormImageHeaderIsForForm()"></ca-form-image>
+                [form]="getFormImageHeader()">
+            </ca-form-image>
         </div>
         
-        <!-- ARTICLE BASIQUE -->
-        <div *ngIf="getArticle().modelArticle == MODEL_ARTICLE.TYPE_BASIQUE">
-            <ca-form-content-article-basique
-                [form]="getFormContentsArticleTypeBasique()"></ca-form-content-article-basique>
+        <!-- ARTICLE TYPE 0 -->
+        <div *ngIf="getArticle().modelArticle == MODEL_ARTICLE.TYPE_0">
+            
+            <div>
+                <h2>Content : </h2> 
+                <angular-editor [placeholder]="'Enter text here...'" formControlName="contentArticleType0"></angular-editor>
+            </div>
 
             <ca-form-image 
                 title="Image de l'article :"
-                [formName]="getFormImageArticleBasiqueName()" 
-                [form]="getFormImageArticleBasique()"
-                [formHasBeenUpdated]="getFormImageArticleBasiqueIsForForm()"></ca-form-image>
+                [formName]="getFormImageArticle0Name()" 
+                [form]="getFormImageArticle0()">
+            </ca-form-image>
         </div>
         
         <!-- ARTICLE TYPE 1 -->
@@ -54,7 +57,10 @@
                 [form]="getFormContentsArticleType1()"></ca-form-content-article-type-1>            
         </div>
 
-        <ca-form-bibliography [form]="getFormBibliography()"></ca-form-bibliography>
+        <div>
+            <h2>Bibliographie : </h2>
+            <angular-editor [placeholder]="'Enter text here...'" formControlName="bibliography"></angular-editor>
+        </div>
         
         <ca-form-type [form]="articleForm"></ca-form-type>
 
@@ -63,10 +69,8 @@
 
     <p-button class="fixed bg-green-500" icon="pi pi-search" (click)="sidebarDisplay = true" label="Modifier"></p-button>
 
-    <ca-article-basique *ngIf="getArticle() && getArticle().modelArticle == MODEL_ARTICLE.TYPE_BASIQUE" 
-    [isFormForImageHeader]="isFormForImageHeader" [isFormForImageArticle]="isFormForImageArticle" 
-    [article]="getArticle()" [screenSize]="screenSize"></ca-article-basique>
-    <ca-article-type-1 *ngIf="getArticle() && getArticle().modelArticle == MODEL_ARTICLE.TYPE_1" 
-    [isFormForImageHeader]="isFormForImageHeader"
-    [article]="getArticle()" [screenSize]="screenSize"></ca-article-type-1>
+    <ca-article-type-0 *ngIf="getArticle() && getArticle().modelArticle == MODEL_ARTICLE.TYPE_0" 
+    [isInForm]="true" [article]="getArticle()" [screenSize]="screenSize"></ca-article-type-0>
+    <ca-article-type-1 *ngIf="getArticle() && getArticle().modelArticle == MODEL_ARTICLE.TYPE_1"
+    [isInForm]="true" [article]="getArticle()" [screenSize]="screenSize"></ca-article-type-1>
 </form>

@@ -24,6 +24,10 @@ export class AboutComponent implements OnInit {
     this.chooseScreenSize();
   }
 
+  getText(text: string){
+    return text;
+  }
+
   private chooseScreenSize() {
     if (window.innerWidth > 1170) { // 768px portrait
       this.screenSize = "large";

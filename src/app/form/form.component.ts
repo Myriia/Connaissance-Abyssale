@@ -14,27 +14,23 @@ export class FormComponent  {
   MODEL_ARTICLE = MODEL_ARTICLE;
   TYPE_ARTICLE = TYPE_ARTICLE;
   sidebarDisplay = true;
-  isFormForImageHeader = false;
-  isFormForImageArticle = false;
   displayDialogJson: boolean = false;
   isFormForArticleImageType1: boolean = false;
   modelsArticle = [
-    {name: 'Basique', value: MODEL_ARTICLE.TYPE_BASIQUE},
+    {name: 'Type 0', value: MODEL_ARTICLE.TYPE_0},
     {name: 'Type 1', value: MODEL_ARTICLE.TYPE_1}
   ];
 
   articleForm = new FormGroup({
     id : new FormControl(-1),
-    modelArticle: new FormControl({value:MODEL_ARTICLE.TYPE_BASIQUE}),
+    modelArticle: new FormControl({value:MODEL_ARTICLE.TYPE_0}),
     title: new FormControl(null),
     subTitle: new FormControl(null),
-    contentArticleTypeBasique: new FormArray([]),
+    contentArticleType0: new FormControl(null),
     contentArticleType1: new FormArray([]),
-    bibliography: new FormArray([]),
+    bibliography: new FormControl(null),
     img_article_header: new FormControl(null),
     img_article_header_name: new FormControl(null),
-    img_article_header_is_for_form: new FormControl(false),
-    img_article_basique_is_for_form: new FormControl(false),
     img_article_1: new FormControl(null),
     img_article_1_name: new FormControl(null),
     img_article_presentation: new FormControl(null),
@@ -79,8 +75,8 @@ export class FormComponent  {
 
     let content;
     switch(this.articleForm.get('modelArticle')?.value?.value){
-        case MODEL_ARTICLE.TYPE_BASIQUE:
-          content = this.articleForm.get('contentArticleTypeBasique')?.value;
+        case MODEL_ARTICLE.TYPE_0:
+          content = this.articleForm.get('contentArticleType0')?.value;
           break;
         case MODEL_ARTICLE.TYPE_1:
           content = this.articleForm.get('contentArticleType1')?.value;
@@ -97,30 +93,38 @@ export class FormComponent  {
       img_article_header : this.articleForm.get('img_article_header')?.value,
       img_article_presentation : this.articleForm.get('img_article_presentation')?.value,
       img_article_1 : this.articleForm.get('img_article_1')?.value,
-      img_article_header_is_for_form : this.articleForm.get('img_article_header_is_for_form')?.value,
-      img_article_basique_is_for_form : this.articleForm.get('img_article_basique_is_for_form')?.value,
       types,
     };
   }
-  
-  // Content Article Basique
-  getFormContentsArticleTypeBasique(){return this.articleForm.get("contentArticleTypeBasique") as FormArray;}
-  // Content Article Basique
+
+  getFormContentsArticleType0(){return this.articleForm.get("contentArticleType0") as FormArray;}
   getFormContentsArticleType1(){return this.articleForm.get("contentArticleType1") as FormArray;}
-  // Bibliography
-  getFormBibliography(){return this.articleForm.get("bibliography") as FormArray;}
   // Header
   getFormImageHeaderName(){ return this.articleForm.get('img_article_header_name') as FormControl;}
   getFormImageHeader(){ return this.articleForm.get('img_article_header') as FormControl;}
-  getFormImageHeaderIsForForm(){ return this.articleForm.get('img_article_header_is_for_form') as FormControl;}
-  // Image article basique
-  getFormImageArticleBasiqueName(){ return this.articleForm.get('img_article_1_name') as FormControl;}
-  getFormImageArticleBasique(){ return this.articleForm.get('img_article_1') as FormControl;}
-  getFormImageArticleBasiqueIsForForm(){ return this.articleForm.get('img_article_basique_is_for_form') as FormControl;}
+  // Image article Type 0
+  getFormImageArticle0Name(){ return this.articleForm.get('img_article_1_name') as FormControl;}
+  getFormImageArticle0(){ return this.articleForm.get('img_article_1') as FormControl;}
   
 
   getArticleForExport(){
   let article = this.getArticle();
+  
+  if(article.modelArticle == MODEL_ARTICLE.TYPE_0){
+    return {    
+      id : article.id,
+      modelArticle : article.modelArticle,
+      title : article.title,
+      subTitle : article.subTitle,
+      content : article.content,
+      bibliography : article.bibliography,
+      types : article.types,
+      img_article_header : this.articleForm.get('img_article_header_name')?.value,
+      img_article_presentation : this.articleForm.get('img_article_header_name')?.value,
+      img_article_1 : this.articleForm.get('img_article_1_name')?.value,
+    };
+  }
+
   let content = [...article.content];
   
   if(article.modelArticle == MODEL_ARTICLE.TYPE_1){
@@ -128,6 +132,7 @@ export class FormComponent  {
       return {
         img: c.img_name,
         legendeImg: c.legendeImg,
+        disposition: c.disposition,
         text: c.text
       }
     });

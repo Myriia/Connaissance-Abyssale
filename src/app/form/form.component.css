@@ -1,0 +1,6 @@
+:host>>> angular-editor-toolbar .angular-editor-toolbar-set:nth-child(1){
+    display: none !important;
+}
+:host>>> angular-editor-toolbar .angular-editor-toolbar-set:nth-child(n+3){
+    display: none !important;
+}

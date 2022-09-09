@@ -6,9 +6,9 @@
     </ng-template>
     <p-divider class="p-m-0"></p-divider>
     <p-chip *ngFor="let type of article.types" [label]="type"></p-chip>
-    <div class="content-large">
-      <p *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_BASIQUE" [innerHTML]="article.content"></p>
-      <p *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_1" [innerHTML]="article.content[0].text[0][0]"></p>
+    <div class="content-large w-12">
+      <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_0" [innerHTML]="cleanText(getText(article.content))"></span>
+      <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_1" [innerHTML]="cleanText(getText(article.content[0].text))"></span>
     </div>
     <p class="read-more">lire plus</p>
   </p-card>
@@ -23,8 +23,8 @@
         <span class="content-default">
           <h2 class="m-0">{{article.title}}</h2>
           <p-chip class="mt-1" *ngFor="let type of article.types" [label]="type"></p-chip>
-          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_BASIQUE" class="m-0" [innerHTML]="article.content"></span>
-          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_1" class="m-0" [innerHTML]="article.content[0].text[0][0]"></span>
+          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_0" class="m-0" [innerHTML]="cleanText(getText(article.content))"></span>
+          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_1" class="m-0" [innerHTML]="cleanText(getText(article.content[0].text))"></span>
         </span>
         <p class="read-more">lire plus</p>
       </div>
@@ -41,8 +41,8 @@
         <span class="content-default">
           <h2 class="m-0">{{article.title}}</h2>
           <p-chip class="mt-1" *ngFor="let type of article.types" [label]="type"></p-chip>
-          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_BASIQUE" class="m-0" [innerHTML]="article.content"></span>
-          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_1" class="m-0" [innerHTML]="article.content[0].text[0][0]"></span>
+          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_0" class="m-0" [innerHTML]="cleanText(getText(article.content))"></span>
+          <span *ngIf="article.modelArticle === MODEL_ARTICLE.TYPE_1" class="m-0" [innerHTML]="cleanText(getText(article.content[0].text))"></span>
         </span>
         <p class="read-more">lire plus</p>
       </div>

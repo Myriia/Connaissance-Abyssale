@@ -1,19 +1,13 @@
-<span [ngSwitch]="screenSize">
+<span *ngIf="aPropos" [ngSwitch]="screenSize">
     <!-- Title -->
-    <h3 class="flex justify-content-center mt-0 mb-0 font-italic">{{aPropos?.title}}</h3>
+    <h3 class="flex justify-content-center mt-0 mb-0 font-italic">{{aPropos.title}}</h3>
     <!-- Content -->
     <div class="ml-2 mt-2 mr-2" *ngSwitchCase="'small'">
-        <p *ngFor="let text of aPropos?.content">
-            <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
-            <br>
-        </p>
+        <span class="special_div" [innerHTML]="getText(aPropos.content)"> </span>
     </div>
     <article class="mt-5" *ngSwitchDefault>
         <article>
-            <p *ngFor="let text of aPropos?.content">
-                <span [innerHTML]="'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+text"> </span>
-                <br>
-            </p>
+            <span class="special_div" [innerHTML]="getText(aPropos.content)"> </span>
         </article>
     </article>
 </span>

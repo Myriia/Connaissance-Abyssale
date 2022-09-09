@@ -35,3 +35,7 @@ section{
 .link-chip .p-chip :hover{
   color: black;
 }
+.special_div{
+  font-size: 18px;
+  text-align: justify;
+}

@@ -3,11 +3,11 @@ import {online} from "../../config";
 import {Article, TYPE_ARTICLE} from "../../article";
 
 @Component({
-  selector: 'ca-article-basique',
-  templateUrl: './article-basique.component.html',
-  styleUrls: ['./article-basique.component.css']
+  selector: 'ca-article-type-0',
+  templateUrl: './article-type-0.component.html',
+  styleUrls: ['./article-type-0.component.css']
 })
-export class ArticleBasiqueComponent {
+export class ArticleType0Component {
 
   @Input()
   screenSize : string = "large";
@@ -15,7 +15,14 @@ export class ArticleBasiqueComponent {
   @Input()
   article: Article | undefined;
 
+  @Input()
+  isInForm = false;
+
   online = online;
+
+  getText(text: string){
+    return text;
+  }
 
   public getRouterLink(typeArticle: String) {
     switch(typeArticle){

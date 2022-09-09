@@ -13,6 +13,7 @@ import { ChipModule } from "primeng/chip";
 import {MenubarModule} from 'primeng/menubar';
 import {DataViewModule} from 'primeng/dataview';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -37,17 +38,16 @@ import {ChartModule} from "primeng/chart";
 import {AccordionModule} from "primeng/accordion";
 import {SidebarModule} from 'primeng/sidebar';
 import { CommonModule } from '@angular/common';
-import { ArticleBasiqueComponent } from './article/article-basique/article-basique.component';
+import { ArticleType0Component } from './article/article-type-0/article-type-0.component';
 import { ArticleType1Component } from './article/article-type-1/article-type-1.component';
 import { FormComponent } from './form/form.component';
 import {FileUploadModule} from 'primeng/fileupload';
 import {HttpClientModule} from '@angular/common/http';
 import {DialogModule} from 'primeng/dialog';
 import { FormImageComponent } from './form/form-image/form-image.component';
-import { FormBibliographyComponent } from './form/form-bibliography/form-bibliography.component';
 import { FormTypeComponent } from './form/form-type/form-type.component';
-import { FormContentArticleBasiqueComponent } from './form/form-content-article-basique/form-content-article-basique.component';
 import { FormContentArticleType1Component } from './form/form-content-article-type-1/form-content-article-type-1.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 const routes: Routes = [
   {path: 'form', component: FormComponent},
@@ -78,19 +78,18 @@ const routes: Routes = [
     ProtectionEtConservationComponent,
     TitleComponent,
     ArticleComponent,
-    ArticleBasiqueComponent,
+    ArticleType0Component,
     ArticleType1Component,
     AboutComponent,
 
     // Form
     FormComponent,
     FormImageComponent,
-    FormBibliographyComponent,
     FormTypeComponent,
-    FormContentArticleBasiqueComponent,
-    FormContentArticleType1Component
+    FormContentArticleType1Component,
   ],
   imports: [
+    InputSwitchModule,
     AccordionModule,
     BrowserModule,
     MenubarModule,
@@ -114,7 +113,9 @@ const routes: Routes = [
     CheckboxModule,
     FileUploadModule,
     HttpClientModule,
-    DialogModule
+    DialogModule,
+
+    HttpClientModule, AngularEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

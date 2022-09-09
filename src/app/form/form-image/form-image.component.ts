@@ -19,9 +19,6 @@ export class FormImageComponent  {
   @Input()
   form : FormControl | undefined;
 
-  @Input()
-  formHasBeenUpdated : FormControl | undefined;
-
   hasBeenUpdated = false;
 
   constructor() {}
@@ -44,12 +41,10 @@ export class FormImageComponent  {
 
   updateImageName(fileName: string){
     this.formName?.setValue(fileName);
-    this.formHasBeenUpdated?.setValue(true);
   }
 
   updateImage(image:any){
     this.form?.setValue(image);
-    this.formHasBeenUpdated?.setValue(true);
   }
 
   getImage(){

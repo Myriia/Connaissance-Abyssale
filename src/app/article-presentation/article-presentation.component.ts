@@ -22,4 +22,12 @@ export class ArticlePresentationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cleanText(text: string){
+    return text.replaceAll('&#160;', '').replaceAll('<br>','');
+  }
+
+  getText(text: string){
+    return text;
+  }
+
 }

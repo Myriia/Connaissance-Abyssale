@@ -15,7 +15,18 @@ export class ArticleType1Component {
   @Input()
   article: Article | undefined;
 
+  @Input()
+  isInForm = false;
+
   online = online;
+
+  getLegendeImg(legendeImg: string){
+    return '<p class=\"p-0 m-0 font-italic legende\">' + legendeImg + '</p>';
+  }
+
+  getText(text: string){
+    return text;
+  }
 
   public getRouterLink(typeArticle: String) {
     switch(typeArticle){
