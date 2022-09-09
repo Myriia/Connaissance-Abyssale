@@ -19,13 +19,13 @@ interface Article{
   id: number;
   modelArticle: MODEL_ARTICLE;
   title:string;
-  subTitle?:string;
+  subTitle?:string | null;
   content: string | Partie[];
-  bibliography?:string;
+  bibliography?:string | null;
   img_article_presentation:string;
   img_article_header?:string;
-  img_article_1?:string;
-  img_article_2?:string;
+  img_article_1?:string | null;
+  img_article_2?:string | null;
   types:TYPE_ARTICLE[]|string[];
 }
 
